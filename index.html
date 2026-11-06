@@ -410,74 +410,83 @@
     #printArea .qa div:first-child{font-size:12.5px;color:#555;font-weight:600}
     #printArea .qa div:last-child{font-size:14px;white-space:pre-wrap}
   }
-/* ═══ ATARDECER — pisa los azules del cielo celeste del motor con tonos cálidos.
-   Se inserta al final del <style> del template: con el mismo selector alcanza. ═══ */
-:root{ --sun:#ffb347; --sun2:#ff8a4c; --dusk:#1c1035; --dusk2:#2a1540; --plum:#3d1d52; }
+  .bub .vt b{font-weight:700;color:#000}
+  .bub .hint b{font-weight:600;color:#2a2722}
+  .bub .vt u,.bub .hint u{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
+  .bub.hito{background:#ffd54a;box-shadow:4px 4px 0 #000;position:relative;padding-top:24px}
+  .bub.hito::before{content:'★ CLAVE';position:absolute;left:12px;top:8px;font-family:'Press Start 2P',monospace;font-size:7.5px;color:#7a5a00}
+  .bub.hito .vt{font-size:27px;line-height:1.08;-webkit-text-stroke:.5px #141414}
+  .side-foot{margin-top:auto;display:flex;justify-content:space-between;align-items:center;gap:8px;padding:6px 10px;border:2px solid rgba(255,255,255,.14);background:rgba(0,0,0,.25);white-space:nowrap}
+  .side-foot .saved,.side-foot .linkbtn{font-size:16px}
+/* ═══ NOCHE — pisa los azules celestes del motor con azul noche + acento amarillo luna.
+   (El archivo se sigue llamando sunset.css.) Se inserta al final del <style> del template:
+   con el mismo selector alcanza. ═══ */
+:root{ --sun:#ffd86b; --sun2:#ffb347; --dusk:#0d1430; --dusk2:#0a1028; --plum:#16234a; }
 
-/* fondos con el atardecer (el color de base es el del cielo de arriba, por si la imagen tarda) */
-.dots-bg{background:#2a1540 var(--sky) center bottom / cover no-repeat;image-rendering:pixelated}
-#gate{background:#1c1035 var(--sky) center bottom / cover no-repeat;image-rendering:pixelated}
-.gate-card img{filter:drop-shadow(3px 3px 0 #2a1238)}
+/* fondos con la noche (el color de base es el del cielo de arriba, por si la imagen tarda) */
+.dots-bg{background:#0d1430 var(--sky) center bottom / cover no-repeat;image-rendering:pixelated}
+#gate{background:#070b1e var(--sky) center bottom / cover no-repeat;image-rendering:pixelated}
+.gate-card img{filter:drop-shadow(3px 3px 0 #050816)}
 .gbtn{background:var(--sun)}
 
-/* costado: velo violeta oscuro en vez del azul noche */
-.side.dots-bg{background:linear-gradient(rgba(30,12,40,.84),rgba(30,12,40,.84)),#2a1540 var(--sky) center bottom / cover no-repeat}
-.side{border-right-color:#2c1838}
-.side-stage{background:#1e1226;border-color:#3a2448}
-.side-stage::after,.scene::after{background:repeating-linear-gradient(90deg,#3a2448 0 12px,#2c1a38 12px 24px)}
-.sbox{border-right-color:#3a2448}
+/* costado: velo azul noche */
+.side.dots-bg{background:linear-gradient(rgba(8,12,30,.84),rgba(8,12,30,.84)),#0d1430 var(--sky) center bottom / cover no-repeat}
+.side{border-right-color:#18213d}
+.side-stage{background:#0e1428;border-color:#26304e}
+.side-stage::after,.scene::after{background:repeating-linear-gradient(90deg,#26304e 0 12px,#1b2440 12px 24px)}
+.sbox{border-right-color:#26304e}
 .stat{color:var(--sun)}
-body.typing .stat{color:#ffe38a}
-.route button:hover{background:#2a1834}
-.route button.cur{background:#2e1a3a}
+body.typing .stat{color:#fff1b8}
+.route button:hover{background:#141d38}
+.route button.cur{background:#18223f}
 .route button .s{color:var(--sun)}
-.side-foot{border-top-color:#2c1838}
-#menuBtn{border-color:#4a2c58}
+.side-foot{border-top-color:#18213d}
+#menuBtn{border-color:#2c3a5e}
 
-/* encabezado del chat: toma la parte de arriba del cielo (violeta) */
-.chead{background:#24123f var(--sky) center 0 / cover no-repeat;image-rendering:pixelated}
-.hdl,.ttl b{text-shadow:2px 2px 0 #1a0b26}
-body.typing .ttl small{background:#ffe38a}
-.pbar{background:#2c1838}
-.pbar i{background:repeating-linear-gradient(90deg,#ffb347 0 8px,#ff8a4c 8px 16px)}
+/* encabezado del chat: toma la parte de arriba del cielo (azul noche con estrellas) */
+.chead{background:#070b1e var(--sky) center 0 / cover no-repeat;image-rendering:pixelated}
+.hdl,.ttl b{text-shadow:2px 2px 0 #050816}
+body.typing .ttl small{background:#fff1b8}
+.pbar{background:#18213d}
+.pbar i{background:repeating-linear-gradient(90deg,#ffd86b 0 8px,#ffb347 8px 16px)}
 
-/* portada: sombras violeta en lugar de azul marino */
-.intro h1{text-shadow:4px 4px 0 #2a1238}
-.intro .byline{text-shadow:2px 2px 0 #2a1238}
-.intro .ps{color:#ffe2c4;text-shadow:1px 1px 0 #2a1238}
-.intro img{filter:drop-shadow(2px 2px 0 #2a1238)}
+/* portada: sombras azul muy oscuro */
+.intro h1{text-shadow:4px 4px 0 #050816}
+.intro .byline{text-shadow:2px 2px 0 #050816}
+.intro .ps{color:#dfe8ff;text-shadow:1px 1px 0 #050816}
+.intro img{filter:drop-shadow(2px 2px 0 #050816)}
 
 /* avatares y escenas */
-.av,.mav{background:#2a1834}
-.scene{background-color:#1e1226;border-color:#3a2448}
+.av,.mav{background:#141d38}
+.scene{background-color:#0e1428;border-color:#26304e}
 .scene-t .ps{color:var(--sun)}
 .scene-t .iglink{border-bottom-color:var(--sun)}
 .scene-t .iglink:hover{color:var(--sun)}
 
 /* barra de abajo y botones */
-.dock{background:rgba(26,12,34,.9);border-top-color:#2c1838}
-.qb{box-shadow:3px 3px 0 #2a1238}
+.dock{background:rgba(8,12,30,.9);border-top-color:#18213d}
+.qb{box-shadow:3px 3px 0 #050816}
 .qb.pri,.btnp,#csend{background:var(--sun)}
-.qb.chip{border-color:#5a3a68;color:#f6ece4}
+.qb.chip{border-color:#3a4a72;color:#eef2fb}
 .qb.chip:hover{border-color:var(--sun)}
-.qb.ghost{border-color:#5a3a68;color:#c9b8c8}
-.dockhint{color:#c9b8c8}
-.composer textarea,#csend{box-shadow:3px 3px 0 #2a1238}
+.qb.ghost{border-color:#3a4a72;color:#b9c3da}
+.dockhint{color:#b9c3da}
+.composer textarea,#csend{box-shadow:3px 3px 0 #050816}
 
-/* detalles verdes del motor → ámbar */
+/* detalles verdes del motor → amarillo luna */
 .yn .seg button.sel.si,.chk.on .box{background:var(--sun)}
-.vibe span{border-color:#5a3a68}
+.vibe span{border-color:#3a4a72}
 
 /* scrollbar del hilo */
-.thread{scrollbar-color:#7a3a6a transparent}
+.thread{scrollbar-color:#3a5578 transparent}
 .thread::-webkit-scrollbar{width:10px}
 .thread::-webkit-scrollbar-track{background:transparent}
-.thread::-webkit-scrollbar-thumb{background:#7a3a6a;border:2px solid #1c1035}
-.thread::-webkit-scrollbar-thumb:hover{background:#a8486c}
+.thread::-webkit-scrollbar-thumb{background:#3a5578;border:2px solid #070b1e}
+.thread::-webkit-scrollbar-thumb:hover{background:#557aa0}
 ::selection{background:var(--sun);color:#000}
 
-/* textos chicos del costado: un gris lila más claro para que se lean sobre el violeta */
-.route .lbl,.route button .n,.saved,.linkbtn,.handle{color:#ab9cb5}
+/* textos chicos del costado: gris azulado claro para que se lean sobre el azul noche */
+.route .lbl,.route button .n,.saved,.linkbtn,.handle{color:#a3afc8}
 .linkbtn:hover{color:#fff}
 
 /* ═══ PLAN PERSONALIZADO (agente PLAN) — tarjetas finales del chat ═══ */
@@ -712,6 +721,8 @@ details[open] > .pl-rs{border-bottom:2px dashed #e3d4bb}
   #printArea .pl-ings{grid-template-columns:repeat(4,1fr)}
   #printArea .pl-mm{grid-template-columns:1fr 1fr}
 }
+.pl-sigue{margin-top:12px;display:grid;gap:8px}
+.pl-sigue p{background:#fff;border:2px solid #000;padding:10px 12px;font-size:14.5px;line-height:1.4}
 
   .semana .sem-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin:12px 0 10px}
   .semana .sem-d{border:3px solid #000;background:#fff;padding:8px 4px;text-align:center;display:flex;flex-direction:column;gap:4px;min-height:92px;box-shadow:3px 3px 0 #000}
@@ -733,6 +744,12 @@ details[open] > .pl-rs{border-bottom:2px dashed #e3d4bb}
   .semana .sem-funnel span:last-child{border-right:0}
   .semana .sem-funnel .viral{background:#ffaa33}.semana .sem-funnel .conexion{background:#ff7eb6}.semana .sem-funnel .conversion{background:#7fd4ff}.semana .sem-funnel .fan{background:#fff8ec}
   @media (max-width:560px){ .semana .sem-funnel{grid-template-columns:1fr 1fr} .semana .sem-funnel span:nth-child(2){border-right:0} .semana .sem-funnel span:nth-child(-n+2){border-bottom:3px solid #000} }
+  .metricas .met-r{display:grid;grid-template-columns:150px 1fr;gap:2px 12px;border:3px solid #000;box-shadow:3px 3px 0 #000;padding:10px 12px;margin-top:8px;background:#fff8ec}
+  .metricas .met-r b{grid-row:span 2;font-size:14px;line-height:1.2}
+  .metricas .met-r span{font-weight:600;font-size:14.5px;line-height:1.3}
+  .metricas .met-r small{font-size:13px;color:#4a4050;line-height:1.3}
+  .metricas .met-r.viral{border-left:12px solid #ffaa33}.metricas .met-r.conexion{border-left:12px solid #ff7eb6}.metricas .met-r.conversion{border-left:12px solid #7fd4ff}.metricas .met-r.hist{border-left:12px solid #ffd54a}
+  @media (max-width:560px){ .metricas .met-r{grid-template-columns:1fr} .metricas .met-r b{grid-row:auto} }
 
 </style>
 </head>
@@ -772,13 +789,15 @@ details[open] > .pl-rs{border-bottom:2px dashed #e3d4bb}
 <div id="printArea"></div>
 
 <script>
-// Atardecer en pixel art: se dibuja chiquito (200×125) y se agranda sin suavizar.
-// Cielo violeta → rosa → naranja → amarillo, sol synthwave en el horizonte, nubes iluminadas
-// desde abajo, sierra de Mallorca en silueta y el mar con el reflejo del sol en franjas.
-// Lo importante (sol + horizonte) va centrado y en la mitad de abajo: la imagen se usa con
-// "center bottom / cover", así en el celu (vertical) se ve la franja del medio con el sol entero.
+// Noche en pixel art: se dibuja chiquito (200×125) y se agranda sin suavizar.
+// Cielo azul noche/índigo → azul petróleo en el horizonte, estrellas (algunas con brillo en cruz),
+// luna llena con cráteres y halo tramado, nubes finitas iluminadas por la luna, sierra de Mallorca
+// en silueta con las luces de un pueblo en la costa, y el mar oscuro con el reflejo de la luna.
+// (El archivo se sigue llamando sunset.js para no romper el build.)
+// Lo importante (luna + horizonte) va centrado y en la mitad de abajo: la imagen se usa con
+// "center bottom / cover", así en el celu (vertical) se ve la franja del medio con la luna entera.
 (function () {
-  const Wd = 200, Hd = 125, HZ = 89, SX = 100, SR = 25;
+  const Wd = 200, Hd = 125, HZ = 89, MX = 100, MY = 63, MR = 12;
   const c = document.createElement("canvas");
   c.width = Wd; c.height = Hd;
   const g = c.getContext("2d");
@@ -788,130 +807,142 @@ details[open] > .pl-rs{border-bottom:2px dashed #e3d4bb}
   const mix = (a, b, t) => { const A = hex(a), B = hex(b); return "#" + A.map((v, i) => Math.round(v + (B[i] - v) * t).toString(16).padStart(2, "0")).join(""); };
 
   // ── cielo en franjas limpias, con una fila tramada en cada cambio ──
-  const SKY = ["#1c1035","#24123f","#2e1648","#3b1a52","#4d1f5b","#622462","#7a2a68","#93326c",
-               "#ad3d6e","#c44b6d","#d75669","#e46863","#ee7a5d","#f38c58","#f69e55","#f8ad57"];
-  const top = 0, band = (HZ - top) / SKY.length;
-  const skyAt = y => SKY[Math.min(SKY.length - 1, Math.max(0, Math.floor((y - top) / band)))];
+  const SKY = ["#070b1e","#091026","#0b142e","#0d1936","#0f1e3e","#112445","#132a4c","#153153",
+               "#17385a","#194060","#1b4865","#1e5069"];
+  const band = HZ / SKY.length;
+  const skyAt = y => SKY[Math.min(SKY.length - 1, Math.max(0, Math.floor(y / band)))];
   for (let y = 0; y < HZ; y++) {
     const i = Math.min(SKY.length - 1, Math.floor(y / band));
     const edge = i > 0 && y === Math.floor(i * band);
     for (let x = 0; x < Wd; x++) px(x, y, edge && (x + y) % 2 ? SKY[i - 1] : SKY[i]);
   }
-  // estrellitas arriba, pocas
-  for (let k = 0; k < 26; k++) {
-    const x = Math.floor(rnd() * Wd), y = Math.floor(rnd() * 26);
-    px(x, y, rnd() < 0.3 ? "#fff3d6" : "#9b84c4");
+  // halo de la luna: dos anillos tramados un poco más claros
+  for (let y = MY - MR - 14; y < Math.min(HZ, MY + MR + 14); y++) for (let x = MX - MR - 14; x <= MX + MR + 14; x++) {
+    const d = Math.hypot(x + 0.5 - MX, y + 0.5 - MY);
+    if (d < MR + 5 && d >= MR) px(x, y, mix(skyAt(y), "#9fc2d8", 0.22));
+    else if (d < MR + 12 && d >= MR + 5 && (x + y) % 2) px(x, y, mix(skyAt(y), "#9fc2d8", 0.13));
   }
-  // halo del sol: dos anillos tramados un poco más claros
-  for (let y = HZ - SR - 14; y < HZ; y++) for (let x = SX - SR - 16; x <= SX + SR + 16; x++) {
-    const d = Math.hypot(x + 0.5 - SX, (y + 0.5 - HZ) * 1.15);
-    if (d < SR + 6 && d >= SR) px(x, y, mix(skyAt(y), "#ffd77a", 0.32));
-    else if (d < SR + 13 && d >= SR + 6 && (x + y) % 2) px(x, y, mix(skyAt(y), "#ffd77a", 0.22));
+  // estrellas (las de cruz van debajo de la fila 14, así no se meten en el encabezado): puntitos, algunas más brillantes y unas pocas con brillo en cruz
+  const STAR = ["#5c6f9a","#8fa3cc","#c9d6f0","#ffffff"];
+  for (let k = 0; k < 120; k++) {
+    const x = Math.floor(rnd() * Wd), y = Math.floor(Math.pow(rnd(), 1.4) * (HZ - 12));
+    if (Math.hypot(x - MX, y - MY) < MR + 13) continue;
+    const t = rnd();
+    px(x, y, STAR[t < 0.45 ? 0 : t < 0.8 ? 1 : t < 0.95 ? 2 : 3]);
   }
+  const cross = (x, y, big) => {
+    px(x, y, "#ffffff");
+    [[1,0],[-1,0],[0,1],[0,-1]].forEach(([a, b]) => { px(x + a, y + b, "#c9d6f0"); if (big) px(x + 2 * a, y + 2 * b, "#5c6f9a"); });
+  };
+  [[22,18,1],[63,22,0],[141,16,1],[178,32,0],[34,44,0],[160,55,1],[88,26,0],[118,20,0],[8,60,0],[190,20,0]].forEach(s => cross(s[0], s[1], s[2]));
 
-  // ── nubes "bollo" estiradas, iluminadas desde abajo ──
-  function cloudBank(cx, base, w, h, n, pal, z) {
+  // ── nubes finitas, iluminadas por la luna (gris azulado) ──
+  function cloudBank(cx, base, w, h, n, z) {
     const B = [];
     for (let k = 0; k < n; k++) {
       const t = (k + 0.5) / n, prof = Math.sin(t * Math.PI);
       const x = cx - w / 2 + t * w + (rnd() - 0.5) * 4;
-      const r = Math.max(2.4, h * (0.45 + 0.4 * prof) + rnd() * 1.4);
+      const r = Math.max(2.2, h * (0.45 + 0.4 * prof) + rnd() * 1.2);
       const y = base - r * 0.55 * prof - (rnd() - 0.2) * 1.6;
-      B.push({ x, y, r, z: z + rnd() });
+      B.push({ x, y, r, z: z + rnd(), base });
     }
-    return B.map(b => Object.assign(b, { pal, base }));
+    return B;
   }
-  const PINK = ["#3a1a50","#5a2662","#86356f","#c4566f","#f2866e","#ffb98a"];
-  const GOLD = ["#5a2662","#86356f","#bf4d6a","#ec7962","#fca46a","#ffd892"];
+  const CL = ["#0f1a35","#16244a","#22335c","#34496f","#4f6686","#7a90aa"];
   const B = [].concat(
-    cloudBank(38, 30, 62, 5.5, 9, PINK, 1),
-    cloudBank(170, 22, 52, 4.5, 8, PINK, 1),
-    cloudBank(150, 52, 70, 5, 10, PINK, 2),
-    cloudBank(28, 62, 46, 4, 7, GOLD, 2),
-    cloudBank(112, 40, 26, 3, 5, PINK, 1.5),
-    cloudBank(70, 76, 40, 2.6, 7, GOLD, 3),
-    cloudBank(176, 78, 34, 2.4, 6, GOLD, 3)
+    cloudBank(40, 36, 58, 4.5, 9, 1),
+    cloudBank(166, 26, 48, 4, 8, 1),
+    cloudBank(150, 60, 56, 4, 9, 2),
+    cloudBank(40, 70, 40, 3, 7, 2),
+    cloudBank(84, 50, 22, 2.4, 4, 3)
   );
   for (let y = 0; y < HZ; y++) for (let x = 0; x < Wd; x++) {
     let f = null, behind = false;
     for (const b of B) {
-      if (y > b.base + 1) continue; // base plana
+      if (y > b.base + 1) continue;
       const d = Math.hypot(x + 0.5 - b.x, (y + 0.5 - b.y) * 1.1);
       if (d <= b.r) { if (!f || b.z > f.z) { if (f) behind = true; f = b; } else behind = true; }
     }
     if (!f) continue;
     const nx = (x + 0.5 - f.x) / f.r, ny = (y + 0.5 - f.y) * 1.1 / f.r;
-    const face = nx * Math.sign(SX - f.x); // >0 = el lado que mira al sol, un poco más claro
-    const L = -0.25 + 1.05 * ny + 0.25 * face + (y >= f.base ? 0.4 : 0);
+    // la luz viene de la luna: el borde que mira hacia ella brilla más
+    const lx = MX - f.x, ly = MY - f.y;
+    const L = -0.3 + 0.95 * ny * Math.sign(ly) + 0.2 * nx * Math.sign(lx) + (Math.hypot(x - MX, y - MY) < 45 ? 0.2 : 0);
     let k = L > 0.55 ? 5 : L > 0.25 ? 4 : L > -0.05 ? 3 : L > -0.4 ? 2 : L > -0.75 ? 1 : 0;
-    if (behind && Math.hypot(nx, ny) > 0.85) k = Math.max(0, k - 1);
-    px(x, y, f.pal[k]);
+    if (behind && Math.hypot(nx, ny) > 0.9 && ny < 0) k = Math.max(0, k - 1);
+    px(x, y, CL[k]);
   }
 
-  // ── sol synthwave: degradé amarillo → naranja con rayas que se ensanchan hacia abajo ──
-  const SUN = ["#fff8d2","#fff0a6","#ffe384","#ffd36c","#ffc05e","#ffab56","#ff9752"];
-  for (let y = HZ - SR; y < HZ; y++) {
-    const t = (y - (HZ - SR)) / SR; // 0 arriba, 1 en el horizonte
-    // rayas: a partir de la mitad, filas vacías cada vez más gruesas
-    const yy = y - (HZ - SR);
-    const gaps = [11, 15, 18, 21, 23];
-    const gw = [1, 1, 2, 1, 1];
-    let gap = false; gaps.forEach((gy, i) => { if (yy >= gy && yy < gy + gw[i]) gap = true; });
-    const col = SUN[Math.min(SUN.length - 1, Math.floor(t * SUN.length))];
-    for (let x = SX - SR; x <= SX + SR; x++) {
-      const d = Math.hypot(x + 0.5 - SX, y + 0.5 - HZ);
-      if (d <= SR) px(x, y, gap ? (yy < 17 ? "#f07a5e" : "#e0646a") : col);
+  // ── luna llena con cráteres suaves y borde sombreado ──
+  for (let y = MY - MR; y <= MY + MR; y++) for (let x = MX - MR; x <= MX + MR; x++) {
+    const dx = x + 0.5 - MX, dy = y + 0.5 - MY, d = Math.hypot(dx, dy);
+    if (d > MR) continue;
+    let col = "#f4f1e0";
+    if (d > MR - 1.2 && dx + dy > 2) col = "#c9cbc2";         // sombra abajo a la derecha
+    else if (dx + dy > MR * 0.9) col = "#e2e0cf";
+    else if (d > MR - 1.2) col = "#ffffff";                  // borde iluminado arriba a la izquierda
+    px(x, y, col);
+  }
+  // cráteres (manchas tramadas + sombra)
+  [[-4,-3,2.6],[3,-5,1.6],[4,2,3],[-3,5,1.8],[-7,2,1.2],[7,-1,1.1]].forEach(([cx, cy, r]) => {
+    for (let y = Math.floor(MY + cy - r); y <= MY + cy + r; y++) for (let x = Math.floor(MX + cx - r); x <= MX + cx + r; x++) {
+      const d = Math.hypot(x + 0.5 - MX - cx, y + 0.5 - MY - cy);
+      if (d <= r && Math.hypot(x + 0.5 - MX, y + 0.5 - MY) < MR - 0.6) px(x, y, d > r - 1 && (x - MX - cx) < 0 ? "#c2c3b8" : "#d8d7c6");
     }
-  }
+  });
 
-  // ── sierra de Mallorca en silueta, a los costados (el medio queda libre para el sol) ──
+  // ── sierra de Mallorca en silueta, a los costados (el medio queda libre para la luna) ──
   const ridge = (x0, x1, peak, hgt, jag, P) => {
     for (let x = x0; x < x1; x++) {
       const t = (x - x0) / (x1 - x0);
       const shape0 = Math.pow(Math.sin(Math.PI * Math.min(1, Math.max(0, (t - peak + 0.5)))), 1.4);
       if (shape0 < 0.08) continue;
-      const shape = shape0;
-      const h = Math.round(hgt * shape + jag * (Math.sin(x * 0.9) + 0.6 * Math.sin(x * 2.3 + 1)));
+      const h = Math.round(hgt * shape0 + jag * (Math.sin(x * 0.9) + 0.6 * Math.sin(x * 2.3 + 1)));
       for (let y = HZ - h; y < HZ; y++) {
         const rim = y === HZ - h;
         px(x, y, rim ? P[0] : y < HZ - h + 3 && (x + y) % 2 ? P[1] : P[2]);
       }
     }
   };
-  const FAR = ["#7a3a6a","#4a2358","#3f1e52"], NEAR = ["#4a2356","#2a1440","#22102f"];
+  const FAR = ["#2c4560","#14223a","#111d33"], NEAR = ["#1d2d45","#0b1426","#08101f"];
   ridge(-10, 74, 0.35, 19, 0.8, FAR);
   ridge(-4, 40, 0.6, 9, 0.5, NEAR);
   ridge(128, 214, 0.62, 16, 0.8, FAR);
   ridge(176, 206, 0.4, 7, 0.4, NEAR);
+  // pueblo en la costa: lucecitas amarillas al pie de la sierra
+  [[44,87],[47,86],[50,87],[53,85],[55,87],[58,86],[62,87],[66,86],[30,86],[34,87],
+   [140,87],[143,86],[147,87],[151,85],[154,87],[158,86],[170,87]].forEach(([x, y], i) => px(x, y, i % 3 ? "#ffd86b" : "#ffb347"));
 
-  // ── mar: franjas que oscurecen hacia abajo, con brillos y el reflejo del sol cortado ──
-  const SEA = ["#e07c66","#c25e6c","#9d476c","#7a3666","#5c2a5d","#452152","#341a47","#28143c"];
+  // ── mar oscuro en franjas, con brillos y el reflejo de la luna cortado ──
+  const SEA = ["#1a4660","#163c55","#13334b","#102a41","#0d2237","#0b1b2e","#091526","#07101f"];
   const sband = (Hd - HZ) / SEA.length;
   for (let y = HZ; y < Hd; y++) {
     const i = Math.min(SEA.length - 1, Math.floor((y - HZ) / sband));
     const edge = i > 0 && y === HZ + Math.floor(i * sband);
     for (let x = 0; x < Wd; x++) px(x, y, edge && (x + y) % 2 ? SEA[i - 1] : SEA[i]);
   }
-  px(0, HZ, SEA[0]); g.fillStyle = "#f6a067"; g.fillRect(0, HZ, Wd, 1); // línea del horizonte
-  // reflejo: franjas horizontales centradas que se angostan y se cortan
+  g.fillStyle = "#2f6380"; g.fillRect(0, HZ, Wd, 1); // línea del horizonte
+  // reflejos de las luces del pueblo
+  [[47,90],[53,91],[58,90],[147,90],[151,91],[156,90]].forEach(([x, y]) => { g.fillStyle = "#8a7a46"; g.fillRect(x, y, 2, 1); });
+  // reflejo de la luna: franjas horizontales centradas que se angostan y se cortan
   for (let y = HZ + 1; y < Hd; y++) {
-    const t = (y - HZ) / (Hd - HZ);
     if ((y - HZ) % 2 === 0) continue;
-    const half = Math.round(SR * (1 - 0.55 * t) + (rnd() - 0.5) * 4);
-    const col = t < 0.25 ? "#ffe38a" : t < 0.5 ? "#ffc56a" : t < 0.75 ? "#f59a5e" : "#d9705e";
-    let x = SX - half;
-    while (x < SX + half) {
-      const seg = 2 + Math.floor(rnd() * (7 - 4 * t)), skip = 1 + Math.floor(rnd() * (2 + 4 * t));
-      g.fillStyle = col; g.fillRect(x, y, Math.min(seg, SX + half - x), 1);
+    const t = (y - HZ) / (Hd - HZ);
+    const half = Math.round(MR * (0.8 + 0.5 * t) + (rnd() - 0.5) * 4);
+    const col = t < 0.25 ? "#e8ecdc" : t < 0.5 ? "#b9c8cf" : t < 0.75 ? "#7f9aae" : "#4e6a86";
+    let x = MX - half;
+    while (x < MX + half) {
+      const seg = 2 + Math.floor(rnd() * (6 - 3 * t)), skip = 1 + Math.floor(rnd() * (2 + 4 * t));
+      g.fillStyle = col; g.fillRect(x, y, Math.min(seg, MX + half - x), 1);
       x += seg + skip;
     }
   }
   // brillitos sueltos en el mar
-  for (let k = 0; k < 40; k++) {
+  for (let k = 0; k < 36; k++) {
     const y = HZ + 3 + Math.floor(rnd() * (Hd - HZ - 4)), x = Math.floor(rnd() * Wd);
-    if (Math.abs(x - SX) < SR + 2) continue;
+    if (Math.abs(x - MX) < MR * 1.4 + 3) continue;
     const t = (y - HZ) / (Hd - HZ);
-    g.fillStyle = t < 0.4 ? "#f0957a" : "#8a3f6e"; g.fillRect(x, y, 2 + Math.floor(rnd() * 4), 1);
+    g.fillStyle = t < 0.4 ? "#3a6d88" : "#1f3d58"; g.fillRect(x, y, 2 + Math.floor(rnd() * 4), 1);
   }
 
   try { document.documentElement.style.setProperty("--sky", "url(" + c.toDataURL("image/png") + ")"); } catch (e) {}
@@ -1026,44 +1057,44 @@ function pixelSVG(rows, pal, extra){
 const LARRY_SVG = {};
 ['base','blink','talk','blinktalk','up'].forEach(k => LARRY_SVG[k] = pixelSVG(larryFrame(k), PAL, 'data-f="' + k + '"'));
 
-/* ESTUDIO EN PIXEL ART — el estudio real de Larry: ventanales con vista al mar y la montaña al atardecer,
+/* ESTUDIO EN PIXEL ART — el estudio real de Larry: ventanales con vista al mar y la montaña de noche,
    Poly D + controlador blanco, guitarra, ficus y escritorio con laptop. Larry va adelante, de medio cuerpo. */
 function studioLayers(){
   const W = 60, H = 58; let back = '';
   const R = (x,y,w,h,c) => { back += '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" fill="'+c+'"/>'; };
   let sd = 5; const rnd = () => (sd = (sd * 16807) % 2147483647) / 2147483647;
   const disc = (cx,cy,r,c) => { for(let y=Math.floor(cy-r);y<=cy+r;y++) for(let x=Math.floor(cx-r);x<=cx+r;x++) if(Math.hypot(x+.5-cx,y+.5-cy)<=r) R(x,y,1,1,c); };
-  // vista al atardecer: cielo en franjas violeta → rosa → naranja → amarillo
-  [[0,3,"#4a1f5a"],[3,3,"#6e2766"],[6,3,"#9a356c"],[9,3,"#c44b6d"],[12,2,"#e2665f"],[14,2,"#f2845a"],[16,2,"#f8a457"]].forEach(([y,h,c])=>R(0,y,W,h,c));
-  R(0,18,W,2,"#fbbd5e");
-  // nubes finitas iluminadas desde abajo
-  const cl = (x,y,w) => { R(x+1,y,w-2,1,"#7a3368"); R(x,y+1,w,1,"#c25670"); R(x+1,y+2,w-2,1,"#ffa77a"); };
-  cl(3,4,9); cl(43,3,8); cl(28,8,6); cl(50,11,6);
-  // sol bajo, con rayas, apoyado en el horizonte (ventanal derecho, que Larry no lo tape)
-  for(let y=14;y<20;y++) for(let x=40;x<53;x++){ const d=Math.hypot(x+.5-46,y+.5-20); if(d<=5.8) R(x,y,1,1, y===17||y===19 ? "#f08a5c" : d>4.9 ? "#ffe08a" : "#fff2b0"); }
-  // sierra en silueta a la izquierda y lomita en el medio
-  for(let x=0;x<24;x++){ const h = Math.max(0, Math.round(7 - Math.abs(x-8)*0.55 + Math.sin(x*1.3))); if(h>0){ R(x,20-h,1,h,"#3a1d4c"); R(x,20-h,1,1,"#6e3366"); } }
-  for(let x=22;x<38;x++){ const h = Math.max(0, Math.round(3 - Math.abs(x-29)*0.35 + Math.sin(x*1.1)*0.6)); if(h>0){ R(x,20-h,1,h,"#4a2356"); R(x,20-h,1,1,"#7a3a6a"); } }
-  // mar con el reflejo del sol en franjas cortadas
-  [[20,2,"#e07c66"],[22,3,"#b8546c"],[25,4,"#8a3c6a"],[29,5,"#5e2a5e"]].forEach(([y,h,c])=>R(0,y,W,h,c));
-  R(0,20,W,1,"#f29a6c");
-  [[41,21,10,"#ffe38a"],[42,23,4,"#ffd070"],[47,23,3,"#ffd070"],[43,25,2,"#f8a65e"],[46,25,3,"#f8a65e"],[44,27,3,"#e48460"],[47,29,2,"#c0606a"],[44,31,2,"#a84c68"]].forEach(([x,y,w,c])=>R(x,y,w,1,c));
-  R(6,23,3,1,"#e48460"); R(28,26,4,1,"#b8546c"); R(14,22,2,1,"#f09070"); R(33,23,2,1,"#e07c66");
-  // pinos y arbustos en contraluz bajo la baranda, con el borde tocado por el sol
-  [[3,35,3.5],[9,34,4],[15,36,3.5],[30,35,3],[36,36,2.5]].forEach(([x,y,r])=>{ disc(x,y,r,"#3a2040"); R(Math.floor(x-1),Math.floor(y-r),3,1,"#8a4a5e"); });
-  R(0,36,W,4,"#2b1a33"); for(let i=0;i<30;i++) disc(rnd()*W, 36+rnd()*3, 1+rnd()*1.5, rnd()<.5?"#24152c":"#3a2040");
-  // edificio a la derecha, encendido por el sol y con ventanas prendidas
-  R(51,2,9,38,"#d99a74"); R(51,2,1,38,"#f2b98a"); for(let y=4;y<36;y+=4){ R(53,y,2,2, y%8?"#ffd27a":"#8a4e52"); R(57,y,2,2, y%12?"#8a4e52":"#ffd27a"); }
+  // vista de noche: cielo azul noche → azul petróleo, estrellas y luna llena
+  [[0,4,"#0a1028"],[4,4,"#0d1636"],[8,4,"#111d40"],[12,4,"#15284c"],[16,4,"#1a3557"]].forEach(([y,h,c])=>R(0,y,W,h,c));
+  [[4,8],[12,5],[27,9],[33,4],[9,14],[24,15],[36,12],[43,6],[2,11],[30,16]].forEach(([x,y],i)=>R(x,y,1,1,i%3?"#8fa3cc":"#ffffff"));
+  R(16,8,1,3,"#c9d6f0"); R(15,9,3,1,"#c9d6f0"); R(16,9,1,1,"#ffffff");
+  // nube finita iluminada por la luna
+  R(23,6,7,1,"#34496f"); R(22,7,9,1,"#22335c"); R(40,15,5,1,"#4f6686"); R(39,16,7,1,"#22335c");
+  // luna en el ventanal derecho (que Larry no la tape), con halo y cráteres
+  for(let y=6;y<19;y++) for(let x=40;x<53;x++){ const d=Math.hypot(x+.5-46.5,y+.5-12); if(d>4 && d<=6 && (x+y)%2) R(x,y,1,1,"#2a4a6a"); }
+  disc(46.5,12,4,"#f4f1e0"); R(45,10,2,1,"#d8d7c6"); R(47,13,2,2,"#d8d7c6"); R(44,13,1,1,"#d8d7c6"); R(49,11,1,3,"#c9cbc2"); R(48,14,1,1,"#c9cbc2");
+  // sierra en silueta a la izquierda y lomita en el medio, con lucecitas del pueblo
+  for(let x=0;x<24;x++){ const h = Math.max(0, Math.round(7 - Math.abs(x-8)*0.55 + Math.sin(x*1.3))); if(h>0){ R(x,20-h,1,h,"#111d33"); R(x,20-h,1,1,"#2c4560"); } }
+  for(let x=22;x<38;x++){ const h = Math.max(0, Math.round(3 - Math.abs(x-29)*0.35 + Math.sin(x*1.1)*0.6)); if(h>0){ R(x,20-h,1,h,"#14223a"); R(x,20-h,1,1,"#2c4560"); } }
+  [[3,19],[6,18],[10,19],[13,18],[17,19],[26,19],[31,18],[35,19]].forEach(([x,y],i)=>R(x,y,1,1,i%2?"#ffd86b":"#ffb347"));
+  // mar oscuro con el reflejo de la luna en franjas cortadas
+  [[20,2,"#1a4660"],[22,3,"#143a52"],[25,4,"#102e44"],[29,5,"#0b2236"]].forEach(([y,h,c])=>R(0,y,W,h,c));
+  R(0,20,W,1,"#2f6380");
+  [[43,21,7,"#e8ecdc"],[44,23,2,"#c9d2cc"],[47,23,3,"#c9d2cc"],[43,25,3,"#9fb4bf"],[47,25,2,"#9fb4bf"],[45,27,3,"#7f9aae"],[44,29,2,"#5e7c96"],[47,31,2,"#4e6a86"]].forEach(([x,y,w,c])=>R(x,y,w,1,c));
+  R(6,22,2,1,"#6b6a40"); R(13,22,2,1,"#6b6a40"); R(28,26,4,1,"#1f4d68"); R(14,24,3,1,"#1f4d68");
+  // pinos y arbustos en sombra bajo la baranda, con el borde tocado por la luna
+  [[3,35,3.5],[9,34,4],[15,36,3.5],[30,35,3],[36,36,2.5]].forEach(([x,y,r])=>{ disc(x,y,r,"#0f1a2a"); R(Math.floor(x-1),Math.floor(y-r),3,1,"#2f4a62"); });
+  R(0,36,W,4,"#0b1420"); for(let i=0;i<30;i++) disc(rnd()*W, 36+rnd()*3, 1+rnd()*1.5, rnd()<.5?"#08101a":"#0f1a2a");
+  // edificio a la derecha, de noche, con ventanas prendidas
+  R(51,2,9,38,"#2a3350"); R(51,2,1,38,"#3d4a6c"); for(let y=4;y<36;y+=4){ R(53,y,2,2, y%8?"#ffd27a":"#1a2138"); R(57,y,2,2, y%12?"#1a2138":"#ffe9a8"); }
   // marcos de los ventanales y baranda
-  [[0,2],[19,2],[39,2],[58,2]].forEach(([x,w])=>R(x,0,w,40,'#3a2a20')); R(0,0,W,1,'#3a2a20');
-  R(0,27,W,1,'#2a2a2a'); R(0,33,W,1,'#2a2a2a');
-  R(0,38,W,2,'#4a3628');
-  // pared baja y piso de baldosas
-  R(0,40,W,8,'#ead6c2'); R(0,47,W,1,'#c9ab94');
-  for(const x0 of [4,24,44]) for(let y=40;y<47;y++) R(x0+(y-40),y,11,1,'#f5d9b4'); // luz cálida de la ventana en la pared
-  R(0,48,W,10,'#dccab8');
-  for(const x0 of [10,30,50]) for(let y=48;y<58;y++) R(x0+(y-48),y,10,1,'#efcfa6'); // reflejo naranja en las baldosas
-  for(let x=0;x<W;x+=6) R(x,48,1,10,'#c4ab96'); R(0,52,W,1,'#c4ab96');
+  [[0,2],[19,2],[39,2],[58,2]].forEach(([x,w])=>R(x,0,w,40,"#3a2a20")); R(0,0,W,1,"#3a2a20");
+  R(0,27,W,1,"#2a2a2a"); R(0,33,W,1,"#2a2a2a");
+  R(0,38,W,2,"#4a3628");
+  // pared baja y piso de baldosas, con la luz cálida de la lámpara del escritorio
+  R(0,40,W,8,"#d9c3a4"); R(0,47,W,1,"#b89e80");
+  R(0,48,W,10,"#cdb89c");
+  for(let x=0;x<W;x+=6) R(x,48,1,10,"#b5a084"); R(0,52,W,1,"#b5a084");
   // guitarra
   R(1,29,1,8,'#c79a3c'); R(0,28,3,2,'#c79a3c'); disc(1.5,42,2.6,'#a8622e'); disc(1.5,46,3.2,'#a8622e'); disc(1.5,43.5,0.8,'#2a1a10');
   // ficus
@@ -1079,11 +1110,19 @@ function studioLayers(){
   // escritorio, laptop, parlantes, micrófono y botella
   R(41,32,18,2,'#d8c39d'); R(41,34,18,1,'#b9a37c'); R(43,35,1,13,'#e8e8e8'); R(56,35,1,13,'#e8e8e8');
   R(47,25,8,7,'#222'); R(48,26,6,5,'#f4f4f4'); for(let y=27;y<31;y++) R(49,y,4,1,'#c4c4c4'); R(46,31,10,1,'#333');
-  R(42,28,3,4,'#151515'); R(43,29,1,1,'#555'); R(56,28,2,4,'#151515');
+  R(42,28,3,4,'#151515'); R(43,29,1,1,'#555');
   R(45,20,1,7,'#111'); R(43,22,2,4,'#2a2a2a');
   // mate con bombilla
   R(51,30,5,2,'#7a4a22'); R(52,32,3,1,'#5a3418'); R(51,29,5,1,'#c9a05a'); R(52,28,3,1,'#6b8f2c'); R(53,28,1,1,'#7fa83a');
   R(54,24,1,5,'#d9dde3'); R(55,24,1,1,'#d9dde3');
+  // lámpara de escritorio encendida: luz cálida que baña el escritorio, la pared y el piso
+  // halo en escalones (pixel), solo sobre el escritorio, la pared y el piso
+  for(let y=32;y<H;y++) for(let x=34;x<W;x++){ const d=Math.hypot(x+.5-56,(y+.5-27)*1.2); const o = d<9 ? .26 : d<15 ? .16 : d<22 && (x+y)%2 ? .12 : 0;
+    if(o) back += '<rect x="'+x+'" y="'+y+'" width="1" height="1" fill="#ffc46b" fill-opacity="'+o+'"/>'; }
+  // la lámpara: base, brazo y pantalla ámbar con la lamparita
+  R(55,31,4,1,"#2a2a2a"); R(57,27,1,4,"#2a2a2a"); R(56,26,1,1,"#2a2a2a");
+  R(53,24,4,1,"#c9822e"); R(52,25,6,1,"#e0a040"); R(53,26,4,1,"#fff1b8");
+  for(let y=27;y<32;y++){ const w=4+(y-27); for(let x=55-Math.floor(w/2);x<55+Math.ceil(w/2);x++) back += '<rect x="'+x+'" y="'+y+'" width="1" height="1" fill="#fff1b8" fill-opacity="'+(.3-(y-27)*.04)+'"/>'; }
   const svg = '<svg class="st-back" viewBox="0 0 '+W+' '+H+'" preserveAspectRatio="xMidYMax slice" shape-rendering="crispEdges">'+back+'</svg>';
   return { back: svg, front: '' };
 }
@@ -1094,24 +1133,29 @@ const PHOTOS = {};
    CONTENIDO — los pasos (src/steps.js). Luna es la artista de ejemplo.
    Tipos de campo: text · area · chips · suggest · choice · colors · yesno · traps
    ════════════════════════════════════════════════════════════════════ */
+/* Marcas en lo que dice Larry (guide.lines, hint, t y fn de AFTER):
+   **así** = negrita (lo MÁS importante: títulos, nombres, frases clave)
+   __así__ = subrayado fino (lo secundario: ejemplos, aclaraciones, detalles)
+   "!frase" = cartel amarillo ★ CLAVE (1 por parada como mucho)
+   En label no van marcas. En deep, HTML normal. */
 const STEPS = [
 {
   id:'tema', t:'Tu tema', min:3,
   guide:{"anim":"rise","prop":"rocket","lines":[
-    "Primera parada: tu tema. Vamos a armar juntos cómo hacer que tu canción llegue a gente que todavía no te conoce.",
-    "Te pregunto lo básico: cómo te llamás, cómo se llama la canción y cuándo sale. Con la fecha ya te calculo los 21 días."]},
+    "Primera parada: **tu tema.** Vamos a armar juntos cómo hacer que tu canción __llegue a gente que todavía no te conoce.__",
+    "Te pregunto lo básico: cómo te llamás, cómo se llama la canción y **cuándo sale.** Con la fecha __ya te calculo los 21 días.__"]},
   why:'Empezamos por lo básico: <b>quién sos, qué canción sale y cuándo</b>. Con la fecha armo tu calendario de 21 días con días reales.',
   fields:[
-    {id:'p_nombre', kind:'text', label:'¿Cuál es tu nombre de artista?', hint:'Como aparece (o va a aparecer) en Spotify.', ex:'Santi', ph:'Tu nombre de artista'},
-    {id:'p_tema', kind:'text', label:'¿Cómo se llama la canción que vas a lanzar?', hint:'Si todavía no tiene nombre definitivo, poné el que usás ahora.', ex:'No me escribas', ph:'Nombre del tema'},
-    {id:'p_fecha', kind:'date', label:'¿Qué día sale?', hint:'Ideal un viernes, por lo menos 3 semanas desde hoy. Si todavía no tenés fecha, elegí un viernes de dentro de un mes como meta: después la cambiás.', ex:'Un viernes, 3 semanas después de hoy'},
-    {id:'p_estado', kind:'choice', label:'¿En qué punto está la canción?', hint:'No hay respuesta mala: el plan se acomoda.',
+    {id:'p_nombre', kind:'text', label:'¿Cuál es tu nombre de artista?', hint:'Como aparece __(o va a aparecer)__ en Spotify.', ex:'Santi', ph:'Tu nombre de artista'},
+    {id:'p_tema', kind:'text', label:'¿Cómo se llama la canción que vas a lanzar?', hint:'Si todavía no tiene nombre definitivo, __poné el que usás ahora.__', ex:'No me escribas', ph:'Nombre del tema'},
+    {id:'p_fecha', kind:'date', label:'¿Qué día sale?', hint:'Ideal **un viernes**, por lo menos 3 semanas desde hoy. __Si todavía no tenés fecha, tocá «Todavía no lo sé».__', ex:'Un viernes, 3 semanas después de hoy'},
+    {id:'p_estado', kind:'choice', label:'¿En qué punto está la canción?', hint:'No hay respuesta mala: __el plan se acomoda.__',
      ex:'Ya está terminado',
      options:[
       {v:'Ya está terminado', s:'Mezclado y masterizado'},
       {v:'Lo estoy mezclando', s:'Falta poco'},
       {v:'Todavía lo estoy grabando', s:'Arrancamos igual'}]},
-    {id:'p_genero', kind:'suggest', label:'¿Qué género hacés?', hint:'Tocá uno y sumale una palabra que lo haga tuyo: de desamor, lo-fi, con guitarra…',
+    {id:'p_genero', kind:'suggest', label:'¿Qué género hacés?', hint:'Tocá uno y sumale **una palabra que lo haga tuyo:** __de desamor, lo-fi, con guitarra…__',
      ex:'Trap/pop de desamor', ph:'Ej: trap de desamor',
      chips:['Trap','Pop','Reggaetón','R&B','Rap','Indie','Rock','Cumbia','Electrónica','Cantautor']}
   ],
@@ -1126,16 +1170,16 @@ const STEPS = [
 {
   id:'funciona', t:'Cómo funciona', min:5,
   guide:{"anim":"slide","prop":"calendar","lines":[
-    "Nadie se hace fan de golpe. Primero te descubre, después te elige, después te escucha. Recién ahí es fan.",
-    "Por eso son 3 videos por semana: el lunes uno para gente nueva, el miércoles uno para que te elijan y el viernes uno para que te escuchen.",
-    "Mirá la semana de Santi: es el mismo pedazo de canción en los 3, grabados en una sola tarde."]},
+    "!Nadie se hace fan de golpe: primero te descubre, después te elige, después te escucha. Recién ahí es fan.",
+    "Por eso son **3 videos por semana:** __el lunes para gente nueva, el miércoles para que te elijan y el viernes para que te escuchen.__",
+    "Mirá la semana de **Santi:** es __el mismo pedazo de canción en los 3,__ grabados en una sola tarde."]},
   why:'Cada video tiene <b>un trabajo distinto</b>: traer gente nueva, que te elijan o que te escuchen. Los tres, siempre los mismos días, y subidos a las 4 redes.',
   visual:'semana',
   fields:[
-    {id:'d_redes', kind:'chips', multi:true, label:'¿En qué redes tenés cuenta hoy?', hint:'Tocá las que ya tenés. Si te falta alguna, no pasa nada: te digo qué hacer.',
+    {id:'d_redes', kind:'chips', multi:true, label:'¿En qué redes tenés cuenta hoy?', hint:'Tocá las que ya tenés. __Si te falta alguna, no pasa nada: te digo qué hacer.__',
      ex:'Instagram, TikTok',
      chips:['Instagram','TikTok','YouTube Shorts','Facebook']},
-    {id:'d_cuenta', kind:'choice', label:'¿Cuántos seguidores tenés en tu red principal?', hint:'La que más usás. Es para saber desde dónde arrancamos, no para juzgarte.',
+    {id:'d_cuenta', kind:'choice', label:'¿Cuántos seguidores tenés en tu red principal?', hint:'La que más usás. Es para saber desde dónde arrancamos, __no para juzgarte.__',
      ex:'Menos de 500',
      options:[
       {v:'Menos de 500', s:'Recién empiezo'},
@@ -1163,33 +1207,33 @@ const STEPS = [
 {
   id:'reels', t:'Tus reels', min:8,
   guide:{"anim":"jump","prop":"camera","lines":[
-    "Los 3 reels se arman igual: el mismo pedazo de tu canción, una frase fuerte en el primer segundo y algo pasando en la imagen.",
-    "A esa frase le decimos gancho: tiene que hacer pensar «esto habla de mí». Si en 3 segundos no paran de pasar, el video muere ahí.",
-    "Y ojo: el viral NO pide que vayan a Spotify. Al que no te conoce le pedís que comente o comparta. El link va el viernes."]},
+    "Los 3 reels se arman igual: **el mismo pedazo de tu canción,** una frase fuerte en el primer segundo y __algo pasando en la imagen.__",
+    "A esa frase le decimos **gancho:** tiene que hacer pensar «esto habla de mí». __Si en 3 segundos no paran de pasar, el video muere ahí.__",
+    "!El viral es para gente que no te conoce: no le pidas que te escuche en Spotify. Pedile que comente o lo comparta."]},
   why:'Un reel en 5 pasos: <b>el pedazo, el gancho, algo pasando, subtítulos y un solo pedido al final</b>. Contame cómo te sale grabarte y te busco el viral que te conviene copiar.',
   fields:[
-    {id:'r_cara', kind:'choice', label:'¿Cómo te sentís frente a la cámara?', hint:'Sé honesto: el mejor video es el que te animás a grabar.',
+    {id:'r_cara', kind:'choice', label:'¿Cómo te sentís frente a la cámara?', hint:'Sé honesto: **el mejor video es el que te animás a grabar.**',
      ex:'Me muestro pero sin hablar',
      options:[
       {v:'Hablo a cámara tranquilo', s:'Puedo contar algo mirando al celu'},
       {v:'Me muestro pero sin hablar', s:'Playback, gestos, texto en pantalla'},
       {v:'Prefiero no mostrar la cara', s:'Manos, lugares, pantalla, otra gente'}]},
-    {id:'r_toca', kind:'choice', label:'Además de cantar, ¿qué hacés?', hint:'Esto cambia qué videos te salen más fácil.',
+    {id:'r_toca', kind:'choice', label:'Además de cantar, ¿qué hacés?', hint:'Esto cambia __qué videos te salen más fácil.__',
      ex:'Solo canto',
      options:[
       {v:'Toco un instrumento', s:'Guitarra, piano, lo que sea'},
       {v:'Solo canto', s:'La voz es lo mío'},
       {v:'Hago los beats / produzco', s:'Armo la música en la compu'}]},
-    {id:'r_lugar', kind:'chips', multi:true, label:'¿Dónde podrías grabar?', hint:'Tocá todos los que tengas a mano. Cuanto más tenga que ver el lugar con la letra, mejor.',
+    {id:'r_lugar', kind:'chips', multi:true, label:'¿Dónde podrías grabar?', hint:'Tocá todos los que tengas a mano. **Cuanto más tenga que ver el lugar con la letra, mejor.**',
      ex:'El auto, Mi cuarto',
      chips:['Mi cuarto','La calle','El auto','El estudio','Con amigos','Al aire libre','Un escenario']},
-    {id:'r_material', kind:'chips', multi:true, label:'¿Qué material ya tenés de esta canción?', hint:'Si no tenés nada, tocá «Nada todavía»: con el celu alcanza.',
+    {id:'r_material', kind:'chips', multi:true, label:'¿Qué material ya tenés de esta canción?', hint:'Si no tenés nada, tocá «Nada todavía»: __con el celu alcanza.__',
      ex:'Nada todavía',
      chips:['Videoclip','Grabaciones en el estudio','Un show en vivo','Fotos','Nada todavía']},
-    {id:'r_mood', kind:'chips', multi:true, max:2, label:'¿Qué se siente en tu canción?', hint:'Elegí 1 o 2. Con esto elijo el tipo de video que mejor le queda.',
+    {id:'r_mood', kind:'chips', multi:true, max:2, label:'¿Qué se siente en tu canción?', hint:'Elegí 1 o 2. __Con esto elijo el tipo de video que mejor le queda.__',
      ex:'Desamor, Nostalgia',
      chips:['Desamor','Fiesta','Nostalgia','Motivación','Calma','Bronca','Amor']},
-    {id:'r_frase', kind:'text', label:'¿Cuál es la frase más fuerte de la letra?', hint:'La que alguien mandaría por chat o pondría en una historia. Esa va a ser tu gancho.',
+    {id:'r_frase', kind:'text', label:'¿Cuál es la frase más fuerte de la letra?', hint:'La que alguien mandaría por chat o pondría en una historia. **Esa va a ser tu gancho.**',
      ex:'La escribí para no escribirte', ph:'Una línea de tu letra'}
   ],
   done:[
@@ -1207,20 +1251,20 @@ const STEPS = [
 {
   id:'historias', t:'Tus historias', min:5,
   guide:{"anim":"pop","prop":"phone","lines":[
-    "Los reels traen gente nueva. Las historias las ven sobre todo los que ya te siguen: ahí es donde se hacen los fans.",
-    "No hay guion. Solo tienen que estar 4 cosas en la semana: Mostrate, Preguntá, Regalá y Recordá.",
-    "El mínimo es 4 días por semana, con 3 historias o más cada día. Lo demás lo decidís vos."]},
+    "Los reels traen gente nueva. Las historias las ven sobre todo los que ya te siguen: **ahí es donde se hacen los fans.**",
+    "!No hay guion: solo tienen que estar 4 cosas en la semana. Mostrate, Preguntá, Regalá y Recordá.",
+    "El mínimo es **4 días por semana, con 3 historias o más cada día.** __Lo demás lo decidís vos.__"]},
   why:'Las historias no llevan guion: <b>las inventás vos</b>. Solo tienen que estar los 4 ingredientes en la semana. El filtro es uno: ¿va con cómo te mostrás como artista? Si va, subilo, aunque sea espontáneo.',
   fields:[
-    {id:'h_historia', kind:'area', label:'¿Cómo nació la canción?', hint:'En 1 a 3 frases. Qué te pasó, dónde estabas, qué sentías. No hace falta que sea dramático: tiene que ser real.',
+    {id:'h_historia', kind:'area', label:'¿Cómo nació la canción?', hint:'En 1 a 3 frases: qué te pasó, dónde estabas, qué sentías. __No hace falta que sea dramático:__ **tiene que ser real.**',
      ex:'La escribí la noche que borré su número. No la quería llamar, así que escribí lo que le hubiera dicho.'},
-    {id:'h_dias', kind:'choice', label:'¿Cuántos días por semana podés subir historias?', hint:'Lo mínimo son 4. Mejor algo que puedas sostener que algo que dejes a la semana.',
+    {id:'h_dias', kind:'choice', label:'¿Cuántos días por semana podés subir historias?', hint:'Lo mínimo son 4. **Mejor algo que puedas sostener** __que algo que dejes a la semana.__',
      ex:'5 días por semana',
      options:[
       {v:'4 días por semana', s:'El mínimo, y alcanza'},
       {v:'5 días por semana', s:'Un poco más de presencia'},
       {v:'Todos los días', s:'Si te sale natural'}]},
-    {id:'h_mostrar', kind:'chips', multi:true, label:'¿Qué te sale mostrar sin esfuerzo?', hint:'Tocá todo lo que te salga fácil. Con esto te armo ideas para cada ingrediente.',
+    {id:'h_mostrar', kind:'chips', multi:true, label:'¿Qué te sale mostrar sin esfuerzo?', hint:'Tocá todo lo que te salga fácil. __Con esto te armo ideas para cada ingrediente.__',
      ex:'El proceso, Encuestas y preguntas',
      chips:['El proceso','Mi día a día','Encuestas y preguntas','Mis amigos / equipo','Lo que escucho']}
   ],
@@ -1241,22 +1285,22 @@ const STEPS = [
 {
   id:'tiempo', t:'Tu tiempo', min:3,
   guide:{"anim":"rise","prop":"clock","look":"up","lines":[
-    "No se graba un video por día. Se graba todo junto, una vez por semana: a eso le digo el bloque de grabación.",
-    "Como los 3 reels usan el mismo pedazo de canción, salen en una tarde. Y de paso grabás clips para las historias de toda la semana.",
-    "Contame cuánto tiempo tenés y qué día te queda mejor. Con eso cierro tu plan."]},
+    "!No se graba un video por día: se graba todo junto, una vez por semana. Es tu bloque de grabación.",
+    "Como los 3 reels usan **el mismo pedazo de canción,** salen en una tarde. __Y de paso grabás clips para las historias de toda la semana.__",
+    "Contame **cuánto tiempo tenés y qué día te queda mejor.** __Con eso armo tu calendario.__"]},
   why:'Grabar todo junto te ahorra la mitad del tiempo y te saca la presión de todos los días. <b>Mejor grabar bien y seguido que agotarte.</b>',
   fields:[
-    {id:'t_horas', kind:'choice', label:'¿Cuánto tiempo por semana le podés dar a grabar y editar?', hint:'Contando grabar y editar los 3 reels. Las historias se hacen en el momento.',
+    {id:'t_horas', kind:'choice', label:'¿Cuánto tiempo por semana le podés dar a grabar y editar?', hint:'Contando grabar y editar los 3 reels. __Las historias se hacen en el momento.__',
      ex:'2 horas por semana',
      options:[
       {v:'2 horas por semana', s:'Lo justo, ideas simples'},
       {v:'4 horas por semana', s:'Con calma'},
       {v:'6 horas o más', s:'Para ir más lejos'}]},
-    {id:'t_dia', kind:'choice', label:'¿Qué día te queda mejor para grabar?', hint:'Lo ideal es domingo, para tener los reels listos el lunes. Pero elegí el que de verdad puedas.',
+    {id:'t_dia', kind:'choice', label:'¿Qué día te queda mejor para grabar?', hint:'Lo ideal es **domingo,** para tener los reels listos el lunes. __Pero elegí el que de verdad puedas.__',
      ex:'Domingo',
      options:[
       {v:'Lunes'},{v:'Martes'},{v:'Miércoles'},{v:'Jueves'},{v:'Viernes'},{v:'Sábado'},{v:'Domingo', s:'El ideal'}]},
-    {id:'t_ayuda', kind:'choice', label:'¿Grabás solo o alguien te filma?', hint:'Las dos funcionan. Solo cambia qué videos te salen más fácil.',
+    {id:'t_ayuda', kind:'choice', label:'¿Grabás solo o alguien te filma?', hint:'Las dos funcionan. __Solo cambia qué videos te salen más fácil.__',
      ex:'Grabo solo con el celu',
      options:[
       {v:'Grabo solo con el celu', s:'Trípode, una pila de libros, lo que haya'},
@@ -1268,69 +1312,118 @@ const STEPS = [
   ],
   deep:`<h4>El bloque de grabación, en 4 pasos</h4><ol style="padding-left:18px"><li><b>Elegir:</b> el pedazo de 15–20 segundos y qué idea va en cada reel.</li><li><b>Escribir:</b> 2 o 3 ganchos para el viral, tu historia para el de conexión y el pedido del viernes.</li><li><b>Grabar los 3 reels:</b> en una sola tarde, porque usan el mismo pedazo.</li><li><b>Grabar para historias:</b> procesos, tomas, adelantos. Material para toda la semana.</li></ol>
 <p style="margin-top:8px">¿Poco tiempo? Grabá dos semanas de una. Y en el viral probá el mismo pedazo con 2 o 3 ganchos distintos: así aprendés qué engancha.</p>
-<h4>Los primeros 1–2 meses son de entrenamiento</h4><p>Al principio el algoritmo no sabe quién sos ni a quién mostrarte. Primero le muestra tus videos a tus seguidores, después a gente nueva, y con lo que hacen te va ubicando. Es como el gimnasio: el cambio se ve después. <b>No juzgues por un video.</b> Compará contra vos mismo la semana anterior, no contra otros.</p>
-<h4>Después del día 21</h4><p>La semana tipo sigue por lo menos 8 semanas: 21 días no alcanzan para que el algoritmo te conozca. El formato que mejor anduvo, hacelo más seguido. Y si sacás un tema cada 4–6 semanas, el próximo entra directo a la semana tipo.</p>`
+<h4>¿Alcanza con el celular y sin saber editar?</h4><p>Sí. Grabás con el celu y editás con CapCut o con el editor de Instagram o TikTok: cortar, poner texto y subtítulos. Calculá una tarde por semana para los 3 reels y unos minutos por día para las historias.</p>`
+},
+{
+  id:'medir', t:'Medir y seguir', min:4,
+  guide:{"anim":"slide","prop":"chart","lines":[
+    "Última parada: **cómo saber si vas bien.** No mires solo las vistas: __cada reel tiene su propio número.__",
+    "!Los primeros 1 o 2 meses son de entrenamiento: no juzgues por un video. Compará contra vos mismo, no contra otros.",
+    "Y el día 21 no se termina nada: **la semana tipo sigue por lo menos 8 semanas.** __Contame qué querés hacer después.__"]},
+  why:'Cada pieza tiene <b>su número</b>. Si alguno sube respecto de la semana anterior, vas bien, aunque las vistas sigan bajas.',
+  visual:'metricas',
+  fields:[
+    {id:'m_dia', kind:'choice', label:'¿Qué día vas a mirar tus números?', hint:'Siempre el mismo día, __así comparás semana contra semana.__',
+     ex:'Domingo',
+     options:[
+      {v:'Domingo', s:'Cierro la semana y grabo la próxima'},
+      {v:'Lunes', s:'Arranco la semana mirando cómo vengo'},
+      {v:'Viernes', s:'Después del reel para que me escuchen'}]},
+    {id:'m_sigue', kind:'choice', label:'Cuando termine el día 21, ¿qué querés hacer?', hint:'No es para siempre: __es para que el plan no se corte el día 22.__',
+     ex:'Sacar otro tema en 1-2 meses',
+     options:[
+      {v:'Sacar otro tema en 1-2 meses', s:'Canción a canción'},
+      {v:'Seguir con 3 reels por semana sin tema nuevo', s:'Empujar este tema más tiempo'},
+      {v:'Hacer una versión acústica o en vivo del mismo tema', s:'Darle una segunda vida'}]}
+  ],
+  done:[
+    'Grabé el bloque: los 3 reels + material para historias',
+    'Subí los 3 reels (lunes, miércoles y viernes) a las 4 redes',
+    {t:'Historias 4 días, con los 4 ingredientes', s:'Mostrate, Preguntá, Regalá, Recordá.'},
+    'Respondí comentarios y mensajes',
+    'Miré los números y anoté qué anduvo mejor'
+  ],
+  deep:`<h4>Los primeros 1–2 meses son de entrenamiento</h4><p>Al principio el algoritmo no sabe quién sos ni a quién mostrarte. Primero le muestra tus videos a tus seguidores, después a gente nueva, y con lo que hacen te va ubicando. Le estás enseñando quién sos. Es como el gimnasio: el cambio se ve después.</p><p style="margin-top:8px">Cuando aprende, aparecen los videos de 10.000 o 30.000 vistas, muy parecidos a los que venías subiendo. <b>Cada video cuenta, aunque no explote.</b> Nos pasa a todos.</p>
+<h4>Después del día 21</h4><ul><li><b>Seguí 8 semanas:</b> 21 días no alcanzan para que el algoritmo te conozca.</li><li><b>Doblá la apuesta:</b> el formato que mejor anduvo, hacelo más seguido.</li><li><b>Siguiente canción:</b> si sacás un tema cada 4–6 semanas, el próximo entra directo a la semana tipo. Así se construye una carrera: canción a canción.</li></ul>
+<h4>Dudas rápidas</h4><ul><li><b>¿Cuántos videos son?</b> 3 por semana: lunes, miércoles y viernes. Si una semana se complica, que no falten el del lunes ni el del viernes.</li><li><b>¿Tengo que estar en las 4 redes?</b> Sí, son gratis y es el mismo video. Si te pesa, arrancá con Instagram y TikTok y sumá las otras en la segunda semana.</li><li><b>¿Pago publicidad?</b> Si tenés menos de 5.000 oyentes mensuales, todavía no: no hay suficiente información de quién es tu público.</li><li><b>¿Y si no tengo fecha ni el tema terminado?</b> Arrancá igual con los reels: la maqueta, una parte de la letra, cómo lo estás haciendo. Los 21 días se cuentan cuando tengas la fecha.</li></ul>`
 }
 ];
 
-/* Lo que dice Larry en la portada y en la tarjeta final */
+/* Lo que dice Larry en la portada y en la parada final */
 const GUIDE_COVER = { anim:'rise', prop:'rocket', lines:[
-  '¡Hola! Soy Larry 👋 Te voy a ayudar a lanzar tu canción.',
-  'Son 5 paradas cortas: tu tema, cómo funciona, tus reels, tus historias y tu tiempo. Al final te armo tu plan de 21 días con fechas reales.',
-  'En cada pregunta vas a ver qué contestó Santi, un artista de ejemplo: hace trap/pop de desamor y solo tiene el celular. Es para darte una idea, no para copiarlo.',
-  'Si te equivocás, tocá tu respuesta y la cambiás. Se guarda solo, así que podés cortar y seguir otro día (en el mismo celu o compu).',
+  '¡Hola! Soy **Larry** 👋 Te voy a ayudar a lanzar tu canción.',
+  'Son 6 paradas cortas: **tu tema, cómo funciona, tus reels, tus historias, tu tiempo y medir y seguir.** __Al final te armo tu plan de 21 días con fechas reales.__',
+  'En cada pregunta vas a ver qué contestó **Santi,** un artista de ejemplo: __hace trap/pop de desamor y solo tiene el celular.__ Es para darte una idea, no para copiarlo.',
+  'Si te equivocás, tocá tu respuesta y la cambiás. __Se guarda solo,__ así que podés cortar y seguir otro día (en el mismo celu o compu).',
   '¿Arrancamos?'] };
 const GUIDE_FINAL = { anim:'jump', prop:'star', lines:[
-  '¡Listo! Con todo lo que me contaste armé tu plan: tus 21 días con fechas reales y los 3 reels de cada semana.',
-  'Antes, elegí tu video viral: te dejo 3 opciones que te quedan bien según lo que me dijiste. Miralas y quedate con la que más te tienta grabar.'] };
+  '¡Listo! Con todo lo que me contaste **armé tu plan.** Primero, elegí tu video viral __entre estas 3 opciones.__',
+  'Después pegá el link de **tu carpeta de Drive** (__la que te mandé por WhatsApp__): ahí subo tu plan y te lo muestro.'] };
 
-/* Reacciones de Larry después de ciertas respuestas (reemplaza al AFTER del manual) */
+/* Reacciones de Larry después de ciertas respuestas (reemplaza al AFTER del manual).
+   val() devuelve '' si contestó «Todavía no lo sé». */
 const AFTER = {
-  p_nombre: [{k:'say', fn:()=>'¡Un gusto, '+(val('p_nombre')||'artista')+'! 🤝 Vamos con tu canción.'}],
-  p_tema: [{k:'say', fn:()=>'«'+(val('p_tema')||'Tu tema')+'». Vamos a hacer que llegue.'}],
+  p_nombre: [{k:'say', fn:()=>'¡Un gusto, **'+(val('p_nombre')||'artista')+'**! 🤝 Vamos con tu canción.'}],
+  p_tema: [{k:'say', fn:()=>val('p_tema') ? '**«'+val('p_tema')+'».** Vamos a hacer que llegue.' : 'Sin nombre por ahora, tranqui: __lo podés cambiar cuando quieras.__'}],
   p_fecha: [{k:'say', fn:()=>{
-    const s = S.p_fecha;
-    if(!s || !/^\d{4}-\d{2}-\d{2}$/.test(s)) return 'Sin fecha por ahora, no pasa nada: arrancás con la semana tipo y los 21 días empiezan cuando la tengas.';
+    const s = val('p_fecha');
+    if(!s || !/^\d{4}-\d{2}-\d{2}$/.test(s)) return 'Tranqui: te armo el plan con **un viernes de ejemplo dentro de 3 semanas** __y después lo cambiás.__';
     const p = s.split('-').map(Number), f = new Date(p[0], p[1]-1, p[2]), h = new Date(); h.setHours(0,0,0,0);
     const n = Math.round((f - h) / 864e5);
     const dias = ['domingo','lunes','martes','miércoles','jueves','viernes','sábado'], dia = dias[f.getDay()];
-    if(n < 0) return 'Esa fecha ya pasó. Si el tema ya salió, igual te sirve: arrancamos con la semana tipo para empujarlo. Si fue un error, tocá tu respuesta y cambiala.';
-    if(n === 0) return '¡Sale hoy! Arrancamos con un plan comprimido: hoy el reel para que lo escuchen y desde mañana la semana tipo.';
-    let t = n === 1 ? 'Falta 1 día.' : 'Faltan '+n+' días.';
-    if(n < 14) t += ' Es poco para los 21 días, pero arrancamos igual con un plan comprimido: lo más importante primero.';
+    if(n < 0) return 'Esa fecha ya pasó. Si el tema ya salió, igual te sirve: **arrancamos con la semana tipo para empujarlo.** __Si fue un error, tocá tu respuesta y cambiala.__';
+    if(n === 0) return '¡Sale hoy! Arrancamos con **un plan comprimido:** __hoy el reel para que lo escuchen y desde mañana la semana tipo.__';
+    let t = n === 1 ? '**Falta 1 día.**' : '**Faltan '+n+' días.**';
+    if(n < 14) t += ' Es poco para los 21 días, pero arrancamos igual con un plan comprimido: __lo más importante primero.__';
     else { const d1 = new Date(f); d1.setDate(d1.getDate() - 13);
-      t += ' Alcanza para el plan completo: tu Día 1 es el '+dias[d1.getDay()]+' '+d1.getDate()+'/'+(d1.getMonth()+1)+'.'; }
-    t += dia === 'viernes' ? ' Y cae viernes, el día ideal 🙌' : ' Cae '+dia+': lo ideal es viernes, pero el plan acomoda los reels a tu fecha.';
+      t += ' Alcanza para el plan completo: __tu Día 1 es el '+dias[d1.getDay()]+' '+d1.getDate()+'/'+(d1.getMonth()+1)+'.__'; }
+    t += dia === 'viernes' ? ' Y cae viernes, el día ideal 🙌' : ' Cae '+dia+': lo ideal es viernes, __pero el plan acomoda los reels a tu fecha.__';
     return t; }}],
   p_estado: [{k:'say', fn:()=>{ const v = val('p_estado');
-    if(v==='Todavía lo estoy grabando') return 'Tranqui, no hace falta que esté terminado para arrancar. Subí la maqueta, una parte de la letra o cómo lo estás haciendo: cuando salga, ya va a haber gente esperándolo.';
-    if(v==='Lo estoy mezclando') return 'Bien. Un dato: tiene que estar cargado en la distribuidora antes del Día 1, así el link para guardarlo funciona desde el anuncio.';
-    return '¡Excelente! Lo más difícil ya está hecho. Ahora toca que se escuche.'; }}],
-  d_redes: [{k:'say', fn:()=>{ const sel = S.d_redes||[], todas = ['Instagram','TikTok','YouTube Shorts','Facebook'];
+    if(v==='Todavía lo estoy grabando') return 'Tranqui, **no hace falta que esté terminado para arrancar.** __Subí la maqueta, una parte de la letra o cómo lo estás haciendo:__ cuando salga, ya va a haber gente esperándolo.';
+    if(v==='Lo estoy mezclando') return 'Bien. Un dato: **tiene que estar cargado en la distribuidora antes del Día 1,** __así el link para guardarlo funciona desde el anuncio.__';
+    if(v==='Ya está terminado') return '¡Excelente! **Lo más difícil ya está hecho.** Ahora toca que se escuche.';
+    return 'No pasa nada: __el plan arranca igual,__ y lo ajustamos cuando sepas.'; }}],
+  d_redes: [{k:'say', fn:()=>{ const sel = [].concat(S.d_redes||[]).filter(x=>x && x!=='Todavía no lo sé'), todas = ['Instagram','TikTok','YouTube Shorts','Facebook'];
+    if(!sel.length) return 'Arrancá abriendo **Instagram y TikTok:** son gratis. __YouTube Shorts y Facebook los sumás la segunda semana.__';
     const faltan = todas.filter(r=>!sel.includes(r));
-    if(!faltan.length) return 'Perfecto, estás en las 4. Cada reel lo subís a todas: es el mismo video, no hacés nada nuevo.';
-    return (faltan.length>1?'Te faltan ':'Te falta ')+faltan.join(', ')+'. Abrí esas cuentas: son gratis y es el mismo video. Si te pesa, sumalas la segunda semana.'; }}],
+    if(!faltan.length) return 'Perfecto, estás en las 4. Cada reel lo subís a todas: **es el mismo video,** __no hacés nada nuevo.__';
+    return (faltan.length>1?'Te faltan ':'Te falta ')+faltan.join(', ')+'. Abrí esas cuentas: **son gratis y es el mismo video.** __Si te pesa, sumalas la segunda semana.__'; }}],
   d_cuenta: [{k:'say', fn:()=>{ const v = val('d_cuenta');
-    if(v==='Menos de 500') return 'Ideal para arrancar: el algoritmo todavía no sabe quién sos y le vas a enseñar. Los primeros 1 o 2 meses son de entrenamiento.';
-    if(v==='Entre 500 y 5.000') return 'Buena base. Esa gente ya te conoce: las historias van a ser tu arma para convertirlos en fans.';
-    return '¡Tenés comunidad! El reel del viernes y las historias van a rendir mucho. El viral te trae gente nueva para seguir creciendo.'; }}],
+    if(v==='Menos de 500') return 'Ideal para arrancar: el algoritmo todavía no sabe quién sos y **le vas a enseñar.** __Los primeros 1 o 2 meses son de entrenamiento.__';
+    if(v==='Entre 500 y 5.000') return 'Buena base. Esa gente ya te conoce: **las historias van a ser tu arma** __para convertirlos en fans.__';
+    if(v==='Más de 5.000') return '¡Tenés comunidad! **El reel del viernes y las historias van a rendir mucho.** __El viral te trae gente nueva para seguir creciendo.__';
+    return 'Anotado. __Lo mirás después y listo:__ el plan sirve igual.'; }}],
   r_cara: [{k:'say', fn:()=>{ const v = val('r_cara');
-    if(v==='Prefiero no mostrar la cara') return 'Tranqui: hay virales sin cara. Tus manos, la pantalla de tu programa, un amigo escuchando tu tema, un lugar con la letra encima. Al final te muestro opciones.';
-    if(v==='Me muestro pero sin hablar') return 'Perfecto: playback y texto en pantalla. Muchos virales son exactamente así.';
-    return 'Genial: el reel del miércoles, el que cuenta tu historia, te va a salir solo.'; }}],
-  r_material: [{k:'say', fn:()=>{ const sel = S.r_material||[];
-    if(!sel.length || sel.includes('Nada todavía')) return 'Con el celu alcanza. Todo lo que necesitás lo grabás en tu bloque de grabación.';
-    return 'Bien, eso suma: lo vamos a usar en los reels y en las historias.'; }}],
-  r_frase: [{k:'say', fn:()=>'«'+(val('r_frase')||'Tu frase')+'». Eso es un gancho 🔥 Va a ser el texto en pantalla de tu viral.'}],
-  h_historia: [{k:'say', t:'Guardá esa historia: es tu reel del miércoles y lo que contás en historias el día que anunciás la fecha.'}],
+    if(v==='Prefiero no mostrar la cara') return 'Tranqui: **hay virales sin cara.** __Tus manos, la pantalla de tu programa, un amigo escuchando tu tema, un lugar con la letra encima.__';
+    if(v==='Me muestro pero sin hablar') return 'Perfecto: **playback y texto en pantalla.** __Muchos virales son exactamente así.__';
+    if(v==='Hablo a cámara tranquilo') return 'Genial: **el reel del miércoles,** __el que cuenta tu historia,__ te va a salir solo.';
+    return 'No pasa nada: __te voy a mostrar opciones con y sin cara__ para que pruebes.'; }}],
+  r_material: [{k:'say', fn:()=>{ const sel = [].concat(S.r_material||[]).filter(x=>x && x!=='Todavía no lo sé');
+    if(!sel.length || sel.includes('Nada todavía')) return '**Con el celu alcanza.** __Todo lo que necesitás lo grabás en tu bloque de grabación.__';
+    return 'Bien, eso suma: __lo vamos a usar en los reels y en las historias.__'; }}],
+  r_frase: [{k:'say', fn:()=>val('r_frase')
+    ? '**«'+val('r_frase')+'».** Eso es un gancho 🔥 __Va a ser el texto en pantalla de tu viral.__'
+    : 'Tranqui: escuchá tu tema y buscá **la línea que alguien mandaría por chat.** __Esa es tu frase.__'}],
+  h_historia: [{k:'say', fn:()=>val('h_historia')
+    ? 'Guardá esa historia: **es tu reel del miércoles** __y lo que contás en historias el día que anunciás la fecha.__'
+    : 'No pasa nada. Pensalo así: **¿qué te pasó la noche que la escribiste?** __Eso es tu reel del miércoles.__'}],
   h_dias: [{k:'say', fn:()=>val('h_dias')==='Todos los días'
-    ? 'Buenísimo. Y si un día no podés, no pasa nada: el piso es 4.'
-    : 'Anotado. Lo importante es que en la semana estén los 4 ingredientes.'}],
+    ? 'Buenísimo. Y si un día no podés, no pasa nada: **el piso es 4.**'
+    : 'Anotado. Lo importante es que **en la semana estén los 4 ingredientes.**'}],
   t_horas: [{k:'say', fn:()=>{ const v = val('t_horas');
-    if(v==='2 horas por semana') return 'Con 2 horas entran los 3 reels si usás ideas simples: playback y texto en pantalla. Las historias las hacés en el día, con el celu.';
-    if(v==='4 horas por semana') return 'Con 4 horas grabás los 3 reels con calma, probás 2 o 3 ganchos para el viral y te quedan clips para historias de toda la semana.';
-    return 'Con 6 horas o más podés grabar dos semanas de una, o sumar un video largo en YouTube: la versión acústica o el video con la letra.'; }}],
-  t_dia: [{k:'say', fn:()=>'Listo: los '+(d=>/o$/.test(d)?d+'s':d)((val('t_dia')||'domingo').toLowerCase())+' grabás. Agendalo en el celu como si fuera un ensayo.'}]
+    if(v==='4 horas por semana') return 'Con **4 horas** grabás los 3 reels con calma, __probás 2 o 3 ganchos para el viral__ y te quedan clips para historias de toda la semana.';
+    if(v==='6 horas o más') return 'Con **6 horas o más** podés grabar dos semanas de una, __o sumar un video largo en YouTube: la versión acústica o el video con la letra.__';
+    return 'Con **2 horas** entran los 3 reels si usás ideas simples: __playback y texto en pantalla.__ Las historias las hacés en el día, con el celu.'; }}],
+  t_dia: [{k:'say', fn:()=>{ const d = (val('t_dia')||'domingo').toLowerCase();
+    return 'Listo: **los '+(/o$/.test(d)?d+'s':d)+' grabás.** __Agendalo en el celu como si fuera un ensayo.__'; }}],
+  m_dia: [{k:'say', fn:()=>{ const d = (val('m_dia')||'domingo').toLowerCase();
+    return 'Anotado: **los '+(/o$/.test(d)?d+'s':d)+' mirás tus números.** __Anotá cuál anduvo mejor y hacé más de ese.__'; }}],
+  m_sigue: [{k:'say', fn:()=>{ const v = val('m_sigue');
+    if(v==='Sacar otro tema en 1-2 meses') return 'Así se construye una carrera: **canción a canción.** __El próximo tema entra directo a la semana tipo, y ya vas a tener gente esperándolo.__';
+    if(v==='Seguir con 3 reels por semana sin tema nuevo') return 'Bien: **8 semanas con el mismo tema** le enseñan al algoritmo quién sos. __Hacé más seguido el formato que mejor te anduvo.__';
+    if(v==='Hacer una versión acústica o en vivo del mismo tema') return 'Gran idea: **le das una segunda vida al tema** __y tenés material nuevo para reels e historias sin escribir otra canción.__';
+    return 'Tranqui: **seguí con la semana tipo** __y lo decidís mirando tus números.__'; }}]
 };
 
 // ───────────────────────────────────────────────────────────────
@@ -1775,7 +1868,7 @@ const PX_DCL = ['Dom','Lun','Mar','Mié','Jue','Vie','Sáb'];
 function pxU(s){ return String(s || '').toUpperCase().normalize('NFD').replace(/[̀-ͯ]/g, ''); }
 const PX_MES = ['ene','feb','mar','abr','may','jun','jul','ago','sep','oct','nov','dic'];
 const PX_MESL = ['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
-const PX_PLAN_URL = 'https://larryprog.github.io/planlanzamiento/';
+const PX_PLAN_URL = 'https://larryprog.github.io/Plan-de-Lanzamiento/';
 const PX_T = {
   viral:      {n:'Viral',      c:'#ffaa33', sub:'Para gente que no te conoce'},
   conexion:   {n:'Conexión',   c:'#ff7eb6', sub:'Para que te conozcan'},
@@ -1924,7 +2017,7 @@ function pxPick(tipo, n, excl){
 function pxFecha(){
   const hoy = pxHoy();
   const avisos = [];
-  let launch = pxParse(S.p_fecha), ejemplo = false;
+  let launch = pxParse(S.p_fecha), ejemplo = false; const sinFecha = !launch;
   if(launch && pxDiff(hoy, pxAdd(launch, 7)) < 0){
     avisos.push({k:'pasada', t:'La fecha que pusiste (' + pxFL(launch) + ') ya pasó. Te armé el plan con una fecha de ejemplo: cambiala arriba y se actualiza.'});
     launch = null;
@@ -1932,7 +2025,7 @@ function pxFecha(){
   if(!launch){
     ejemplo = true;
     launch = pxAdd(hoy, 14); while(launch.getDay() !== 5) launch = pxAdd(launch, 1);
-    if(!S.p_fecha) avisos.push({k:'sinfecha', t:'Todavía no elegiste fecha, así que usé de ejemplo el ' + pxFL(launch) + '. Elegí la tuya y el calendario se acomoda solo.'});
+    if(sinFecha) avisos.push({k:'sinfecha', t:'Todavía no elegiste fecha, así que usé de ejemplo el ' + pxFL(launch) + '. Elegí la tuya y el calendario se acomoda solo.'});
   }
   if(!ejemplo && launch.getDay() !== 5){
     let a = launch, b = launch; while(a.getDay() !== 5) a = pxAdd(a, -1); while(b.getDay() !== 5) b = pxAdd(b, 1);
@@ -2223,14 +2316,21 @@ function pxSecAjustes(M){
     + '<div class="pl-ab"><span class="ps">TU CUENTA · ' + esc(pxU(cu || 'sin dato')) + '</span><p>' + cuT + '</p></div>'
     + '</div>');
 }
+function pxSigue(){
+  const d = (val('m_dia') || 'Domingo').toLowerCase(), s = val('m_sigue');
+  const after = /otro tema/i.test(s) ? 'Arrancá a preparar el próximo tema: en 1-2 meses repetís estos 21 días. Mientras, seguí con 3 reels por semana usando lo que mejor anduvo.'
+    : /acústica|en vivo/i.test(s) ? 'Grabá la versión acústica o en vivo y usala como contenido nuevo del mismo tema: le da una segunda vida sin esperar otro lanzamiento.'
+    : 'Seguí con 3 reels por semana (viral, conexión, conversión) aunque no haya tema nuevo: el algoritmo premia a quien no para.';
+  return '<div class="pl-sigue"><p><b>📅 Tu día de números:</b> los ' + esc(pxPl(d)) + '. Anotá los 3 números de cada reel y compará con la semana anterior.</p><p><b>➡️ Después del día 21:</b> ' + esc(after) + '</p></div>';
+}
 function pxSecMedir(){
-  return pxSec(6, 'Cómo medir', 'Mirá 3 números, nada más.',
+  return pxSec(6, 'Medir y seguir', 'Mirá 3 números, una vez por semana.',
     '<div class="pl-med">'
     + '<div><b class="pl-mn" style="--c:#ffaa33">1</b><p><b>Vistas de no seguidores y retención</b> (en el viral). ¿Gente nueva lo ve hasta el final? Eso dice si el gancho funciona.</p></div>'
     + '<div><b class="pl-mn" style="--c:#ff7eb6">2</b><p><b>Guardados y compartidos</b> (en conexión). Valen más que los likes: dicen que le importó.</p></div>'
     + '<div><b class="pl-mn" style="--c:#7fd4ff">3</b><p><b>Clics al link y pre-saves</b> (en conversión). Es lo que termina en escuchas.</p></div>'
     + '</div>'
-    + '<p class="pl-train"><b>🧠 Paciencia:</b> los primeros 1-2 meses estás <b>entrenando al algoritmo</b> para que sepa a quién mostrarte. No juzgues por un video: mirá la tendencia de varias semanas y repetí lo que mejor anduvo.</p>');
+    + pxSigue() + '<p class="pl-train"><b>🧠 Paciencia:</b> los primeros 1-2 meses estás <b>entrenando al algoritmo</b> para que sepa a quién mostrarte. No juzgues por un video: mirá la tendencia de varias semanas y repetí lo que mejor anduvo.</p>');
 }
 function pxPlanInner(print){
   const M = pxModelo();
@@ -2255,7 +2355,7 @@ function planCierre(){
     + '<div class="pl-cb">'
     + '<button class="pl-big pl-b-pdf" type="button" data-pxprint="1"><span>⬇</span>Guardar mi plan en PDF<small>Se abre imprimir: elegí «Guardar como PDF».</small></button>'
     + '<a class="pl-big pl-b-wsp" data-pxwsp="1" href="' + esc(pxWspURL()) + '" target="_blank" rel="noopener"><span>💬</span>Mandarle mi plan a Larry por WhatsApp<small>Te respondo yo.</small></a>'
-    + '<a class="pl-big" href="' + PX_PLAN_URL + '" target="_blank" rel="noopener"><span>🚀</span>Abrir el Plan Personalizado online<small>La guía completa, día por día.</small></a>'
+    + (S._docUrl ? '<a class="pl-big" href="' + esc(S._docUrl) + '" target="_blank" rel="noopener"><span>📁</span>Abrir mi plan en Drive<small>Ya está en tu carpeta, día por día.</small></a>' : '')
     + '<a class="pl-big" href="' + esc(ars) + '" target="_blank" rel="noopener"><span>🎞</span>Ver los 23 ejemplos (Arsenal)<small>Todos los videos para copiar.</small></a>'
     + '</div></div>';
 }
@@ -2359,6 +2459,58 @@ function visualSemana(){
     + '<p class="note">El mismo video en Instagram · TikTok · YouTube Shorts · Facebook. Historias, mínimo 4 días.</p></div>';
 }
 
+/* Tarjeta "qué número mirar" (parada Medir y seguir) */
+function visualMetricas(){
+  const R = [
+    ['viral','Viral (lunes)','Vistas de gente que no te sigue y cuánto lo miran hasta el final','Si la mayoría se va en los primeros 3 segundos, cambiá el gancho.'],
+    ['conexion','Conexión (miércoles)','Guardados, compartidos y comentarios','Valen más que los likes: dicen que le importó.'],
+    ['conversion','Conversión (viernes)','Clics al link y pre-saves','Es lo que termina en escuchas en Spotify.'],
+    ['hist','Historias','Respuestas a encuestas y mensajes','Si te responden, te conocen: ahí nacen los fans.']
+  ];
+  return '<div class="metricas"><span class="ps">QUE NUMERO MIRAR</span>'
+    + R.map(r => '<div class="met-r '+r[0]+'"><b>'+r[1]+'</b><span>'+r[2]+'</span><small>'+r[3]+'</small></div>').join('')
+    + '<p class="note">Mirá los números <b>una vez por semana</b>, no todos los días. Lo que importa es la tendencia de varias semanas, no un video suelto.</p></div>';
+}
+
+/* ════════ SUBIR EL PLAN A DRIVE ════════
+   Mismo Apps Script que el Plan Personalizado online: crea un Google Doc
+   «Plan de Lanzamiento — artista» en la carpeta del artista.
+   El doc arma un título por cada «DÍA N — …:». */
+const GUIA_APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbx3HAB6n7ZGwh_WfiBtuUygnzgEpN4bRTf4Ej29pUAzrJw5QCmOglwsHcEmGxxq23sWdA/exec";
+function planRespuestas(){
+  const M = pxModelo();
+  return {
+    titulo: val('p_tema'), genero: val('p_genero'),
+    mensaje: val('h_historia'), oyenteIdeal: '', mood: arr('r_mood').join(', '),
+    masterListo: val('p_estado'), distribuidora: '',
+    fechaLanzamiento: pxFL(M.launch) + (M.ejemplo ? ' (de ejemplo)' : ''),
+    horasSemana: val('t_horas'),
+    equipo: [val('t_ayuda'), val('r_cara'), val('r_toca')].filter(Boolean).join(' · '),
+    usaAds: '', listaContactos: ''
+  };
+}
+function planDocTexto(){
+  const M = pxModelo(), e = M.elegido, F = (s, x, c) => pxFill(s, x, true, c);
+  const L = [];
+  L.push('TU VIDEO VIRAL: ' + F(e.titulo, e) + (e.vimeo ? ' (ejemplo: ' + pxVimeoLink(e.vimeo) + ')' : ''));
+  (e.pasos || []).forEach((p, k) => L.push((k + 1) + '. ' + F(p, e)));
+  if(e.texto) L.push('Texto en pantalla: ' + F(e.texto, e));
+  L.push('Redes: ' + (arr('d_redes').join(', ') || 'Instagram, TikTok, YouTube Shorts y Facebook') + ' (el mismo video en todas).');
+  L.push('Medís tus números los ' + pxPl((val('m_dia') || 'domingo').toLowerCase()) + '. Después del día 21: ' + (val('m_sigue') || 'seguí con 3 reels por semana') + '.');
+  L.push('');
+  M.dias.forEach(D => {
+    const parts = [];
+    if(D.lanz) parts.push('★ LANZAMIENTO');
+    if(D.reel){ const R = D.reel; parts.push('Reel ' + (R.tipo === 'lanz' ? 'de lanzamiento' : PX_T[R.tipo].n.toLowerCase()) + ': ' + F(R.e.titulo, R.e, {post: R.post}) + (R.e.vimeo ? ' (ejemplo: ' + pxVimeoLink(R.e.vimeo) + ')' : '')); }
+    if(D.hist) parts.push('3 historias · ' + D.hist.ing + ': ' + pxIngEj(D.hist.ing, D.hist.k, true, D.n > 14, D.n));
+    if(D.graba && D.grabaReels) parts.push('Bloque de grabación: grabá de una los próximos reels (' + D.grabaReels.map(r => PX_DCL[r.d.getDay()].toLowerCase() + ' ' + r.d.getDate()).join(', ') + ').');
+    if(!parts.length) parts.push('Día libre: respondé comentarios y mensajes.');
+    L.push('DÍA ' + D.n + ' — ' + pxFL(D.d).replace(/:/g, '') + ': ' + parts.join(' · '));
+  });
+  return L.join('\n');
+}
+function pxPl(d){ return /s$/.test(d) ? d : d + 's'; }
+
 
 /* ════════════════════════════════════════════════════════════════════
    ESTADO (se guarda solo en el navegador)
@@ -2377,7 +2529,12 @@ function save(){
 }
 function toast(t){ const el=$('#toast'); el.textContent=t; el.classList.add('on'); setTimeout(()=>el.classList.remove('on'),1700); }
 function esc(s){ return String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
-function val(id){ const v=S[id]; if(Array.isArray(v)) return v.filter(Boolean).join(', '); return (v||'').toString().trim(); }
+const NS = 'Todavía no lo sé';
+function val(id){ const v=S[id]; if(Array.isArray(v)) return v.filter(x=>x && x!==NS).join(', '); const t=(v||'').toString().trim(); return t===NS ? '' : t; }
+function raw(id){ const v=S[id]; if(Array.isArray(v)) return v.filter(Boolean).join(', '); return (v||'').toString().trim(); }
+function arr(id){ return (Array.isArray(S[id])?S[id]:[]).filter(x=>x && x!==NS); }
+/* **…** = negrita (lo más importante) · __…__ = subrayado fino (lo secundario) */
+function fmt(t){ return esc(t).replace(/\*\*(.+?)\*\*/g, '<b>$1</b>').replace(/__(.+?)__/g, '<u>$1</u>'); }
 function filled(f){
   const v = S[f.id];
   if(f.kind==='yesno') return v && Object.keys(v).length >= f.items.length;
@@ -2567,7 +2724,7 @@ function buildScript(){
     st.fields.forEach(f=>{
       const grp = f.group && f.group!==prevG ? f.group : null; prevG = f.group || prevG;
       if(f.kind==='yesno'){
-        B.push({k:'say', html:()=>'<p class="vt">'+esc(f.label)+'</p>'+(f.hint?'<p class="hint">'+esc(f.hint)+'</p>':'')});
+        B.push({k:'say', html:()=>'<p class="vt">'+esc(f.label)+'</p>'+(f.hint?'<p class="hint">'+fmt(f.hint)+'</p>':'')});
         f.items.forEach((it,k)=>B.push({k:'ask', f, sub:k}));
       } else B.push({k:'ask', f, grp});
       (AFTER[f.id]||[]).forEach(c=>B.push(c));
@@ -2578,6 +2735,11 @@ function buildScript(){
   B.push({k:'chapter', final:true});
   GUIDE_FINAL.lines.forEach(t=>B.push({k:'say', t}));
   B.push({k:'card', card:'virales'});
+  B.push({k:'go', label:'Ya elegí mi viral →'});
+  B.push({k:'say', t:'**Antes de ver tu plan,** pegame **el link de tu carpeta de Drive** __que te mandé por WhatsApp.__'});
+  B.push({k:'say', html:()=>'<p class="vt">Ahí te subo <b>tu plan completo,</b> día por día, para que lo tengas siempre a mano.</p><p class="hint">Abrí la carpeta desde el link de WhatsApp → tocá <b>⋮</b> o <b>Compartir</b> → <b>Copiar enlace</b> → pegalo acá abajo.</p>'});
+  B.push({k:'send'});
+  B.push({k:'go', label:'Ver mi plan ★'});
   B.push({k:'card', card:'plan'});
   B.push({k:'card', card:'cierre'});
   return B;
@@ -2638,7 +2800,7 @@ async function typing(ms){
   const t = row('l', '<div class="bub typingb"><i></i><i></i><i></i></div>', 'tmp'); toBottom();
   setTalking(true); await wait(ms); t.remove(); setTalking(false);
 }
-function textLen(b){ return b.t ? b.t.length : 90; }
+function textLen(b){ return b.t ? b.t.replace(/[*_!]/g,'').length : 90; }
 function durOf(b){ return Math.max(450, Math.min(1300, textLen(b)*16)); }
 
 function qHTML(b){
@@ -2646,7 +2808,7 @@ function qHTML(b){
   if(b.sub!=null) return '<p class="vt">'+esc(f.items[b.sub])+'</p><span class="qn">'+(b.sub+1)+' DE '+f.items.length+'</span>';
   return (b.grp?'<span class="grp">'+esc(b.grp)+'</span><br>':'')
     + '<p class="vt">'+esc(f.label)+(f.opt?' <span class="opt">(opcional)</span>':'')+'</p>'
-    + (f.hint?'<p class="hint">'+esc(f.hint)+'</p>':'')
+    + (f.hint?'<p class="hint">'+fmt(f.hint)+'</p>':'')
     + (f.ex?'<div class="ex"><b>EJEMPLO DE SANTI</b><strong>“'+esc(f.ex)+'”</strong></div>':'');
 }
 function cardHTML(b){
@@ -2663,6 +2825,7 @@ function cardHTML(b){
   if(c==='virales') return planVirales();
   if(c==='plan') return planCompleto();
   if(c==='cierre') return planCierre();
+  if(c==='metricas') return '<div class="mcard">'+visualMetricas()+'</div>';
   if(c==='semana') return '<div class="mcard">'+visualSemana()+'</div>';
   if(c==='pdf') return '<div class="mcard"><h3>Guardala y seguí</h3><div class="btnrow"><button class="btnw" data-pdf="1">⬇ Guardar mi tarjeta en PDF</button></div>'
     + '<p class="note">Se abre la ventana de imprimir: elegí «Guardar como PDF».</p>'
@@ -2681,7 +2844,8 @@ function sceneHTML(b, live){
 /* "Luna" (la artista de ejemplo) siempre en negrita en lo que dice Larry */
 function lunaB(h){ return h.replace(/>([^<]*)/g, (m, t) => '>' + t.replace(/\bSanti\b/g, '<b class="lb">Santi</b>')); }
 function larryPart(b, live){
-  if(b.k==='say') return row('l', lunaB('<div class="bub">'+(b.html ? b.html() : '<p class="vt">'+esc(b.fn ? b.fn() : b.t)+'</p>')+'</div>'));
+  if(b.k==='say'){ const t = b.html ? null : (b.fn ? b.fn() : b.t); const hito = !!t && t.charAt(0)==='!';
+    return row('l', lunaB('<div class="bub'+(hito?' hito':'')+'">'+(b.html ? b.html() : '<p class="vt">'+fmt(hito ? t.slice(1) : t)+'</p>')+'</div>')); }
   if(b.k==='ask') return row('l', lunaB('<div class="bub">'+qHTML(b)+'</div>'));
   if(b.k==='card'){ const r = row('l', cardHTML(b), 'wide'); if(typeof planBind==='function') planBind(r); return r; }
   if(b.k==='chapter'){ setSide(b, live); return row('c', sceneHTML(b, live)); }
@@ -2691,7 +2855,7 @@ function larryPart(b, live){
 function ansHTML(f, sub){
   const v = S[f.id];
   if(sub!=null && sub!=='') return ((v||{})[sub]==='si') ? 'Sí ✓' : 'Todavía no';
-  if(f.kind==='date' && v){ const d = new Date(v+'T12:00:00'); return esc(d.toLocaleDateString('es', {weekday:'long', day:'numeric', month:'long', year:'numeric'})); }
+  if(f.kind==='date' && v && v!==NS){ const d = new Date(v+'T12:00:00'); return esc(d.toLocaleDateString('es', {weekday:'long', day:'numeric', month:'long', year:'numeric'})); }
   if(f.kind==='colors') return '<span class="sw">'+S.v_colores.map(c=>'<i style="background:'+c+'"></i>').join('')+'</span>';
   if(f.kind==='traps') return S[f.id+'_none'] ? 'No caigo en ninguna 💪' : (Array.isArray(v)&&v.length ? esc(v.join(' · ')) : '<span class="skip">—</span>');
   if(Array.isArray(v)) return v.length ? esc(v.join(' · ')) : '<span class="skip">— lo dejo para después</span>';
@@ -2751,10 +2915,12 @@ function openInput(i){
     qb('Sí', '', ()=>pick('si')); qb('Todavía no', '', ()=>pick('no')); return;
   }
   const skip = ()=>finish(i, ()=>userAns(f));
+  const nose = (pre)=>()=>finish(i, ()=>{ if(pre) pre(); S[f.id] = (f.kind==='chips'||f.kind==='traps') ? [NS] : NS; if(f.kind==='traps') S[f.id+'_none']=false; save(); refreshLive(); userAns(f); });
   if(f.kind==='text' || f.kind==='suggest' || f.kind==='area'){
     if(f.kind==='suggest') f.chips.forEach(c=>qb(c, 'chip', ()=>{ const cur=cin.value.trim(); cin.value = cur ? (cur.includes(c)?cur:cur+' + '+c) : c+' '; grow(); cin.focus(); }));
     if(f.tpl) qb('✨ Armar borrador con mis respuestas', 'chip', ()=>{ cin.value = spotifyDraft(); grow(); cin.focus(); toast('Borrador listo: cambialo a tu manera'); });
     if(f.opt) qb('Saltar →', 'ghost', skip);
+    qb('🤷 '+NS, 'ghost', nose());
     openComposer(f.ph || (f.kind==='area' ? 'Escribí como te salga…' : 'Escribí acá…'), S[f.id], ()=>{
       const v = cin.value.trim(); if(!v){ toast(f.opt ? 'Escribí algo o tocá Saltar' : 'Escribí tu respuesta (mirá el ejemplo de Santi)'); return; }
       finish(i, ()=>{ S[f.id]=v; save(); refreshLive(); userAns(f); });
@@ -2765,12 +2931,14 @@ function openInput(i){
     const w = row('l', '<div class="mcard"><div class="wfield" data-field="'+f.id+'">'+inputHTML(f)+'</div><div class="wfoot"><button class="btnp" type="button">Listo ✓</button></div></div>', 'wide');
     toBottom(); hintLine('Elegí la fecha arriba y tocá <b>Listo</b> ↑');
     if(f.opt) qb('Saltar →', 'ghost', ()=>{ w.remove(); skip(); });
-    w.querySelector('.btnp').onclick = ()=>{ if(!S[f.id] && !f.opt){ toast('Elegí una fecha'); return; } finish(i, ()=>{ w.remove(); refreshLive(); userAns(f); }); };
+    qb('🤷 '+NS, 'ghost', nose(()=>w.remove()));
+    w.querySelector('.btnp').onclick = ()=>{ if(!S[f.id] || S[f.id]===NS){ toast('Elegí una fecha, o tocá «Todavía no lo sé»'); return; } finish(i, ()=>{ w.remove(); refreshLive(); userAns(f); }); };
     return;
   }
   if(f.kind==='choice'){
-    f.options.forEach(o=>qb(o.v, '', ()=>finish(i, ()=>{ S[f.id]=o.v; save(); refreshLive(); userAns(f); }), o.s, f.id==='v_tipo' ? FONTMAP[o.v].replace(/font-size:[^;]+;?/,'') : ''));
+    f.options.forEach(o=>qb(o.v, '', ()=>finish(i, ()=>{ S[f.id]=o.v; save(); refreshLive(); userAns(f); }), o.s));
     if(f.opt) qb('Saltar →', 'ghost', skip);
+    qb('🤷 '+NS, 'ghost', nose());
     return;
   }
   // chips · colors · traps → tarjeta para elegir dentro del chat
@@ -2778,8 +2946,9 @@ function openInput(i){
   toBottom();
   hintLine('Elegí arriba y tocá <b style="color:#ffb347">Listo</b> ↑');
   if(f.opt) qb('Saltar →', 'ghost', ()=>{ w.remove(); skip(); });
+  qb('🤷 '+NS, 'ghost', nose(()=>w.remove()));
   w.querySelector('.btnp').onclick = ()=>{
-    if(f.kind==='chips' && !(S[f.id]||[]).length && !f.opt){ toast('Elegí al menos una'); return; }
+    if(f.kind==='chips' && !arr(f.id).length && !f.opt){ toast('Elegí al menos una, o tocá «Todavía no lo sé»'); return; }
     if(f.kind==='traps' && !filled(f)){ toast('Tocá las que te pasan, o «No caigo en ninguna»'); return; }
     if(f.kind==='colors') save();
     finish(i, ()=>{ w.remove(); refreshLive(); userAns(f); });
@@ -2795,7 +2964,7 @@ function inputHTML(f){
   const v = S[f.id];
   if(f.kind==='text' || f.kind==='suggest') return `<input type="text" data-f="${f.id}" value="${esc(v||'')}" placeholder="${esc(f.ph||'Escribí acá')}">`
       + (f.kind==='suggest' ? `<div class="chips" style="margin-top:10px">${f.chips.map(c=>`<button class="chip" type="button" data-ins="${f.id}" data-v="${esc(c)}">${esc(c)}</button>`).join('')}</div>` : '');
-  if(f.kind==='date') return `<input type="date" data-f="${f.id}" value="${esc(v||'')}">`;
+  if(f.kind==='date') return `<input type="date" data-f="${f.id}" value="${esc(v&&v!==NS?v:'')}">`;
   if(f.kind==='area') return `<textarea data-f="${f.id}" rows="${f.tall?6:4}" placeholder="${esc(f.ph||'Escribí acá, como te salga')}">${esc(v||'')}</textarea>`;
   if(f.kind==='chips'){
     const sel = v||[]; const custom = sel.filter(x=>!f.chips.includes(x));
@@ -2859,7 +3028,7 @@ document.addEventListener('click', e=>{
   if(d.close){ closeEdit(); return; }
   if(d.jump){ const el = document.getElementById(d.jump); if(el) el.scrollIntoView({behavior:'smooth', block:'start'}); document.body.classList.remove('menu'); return; }
   if(d.ins){ const inp = document.querySelector('.wfield [data-f="'+d.ins+'"]'); const cur = inp.value.trim(); inp.value = cur ? (cur.includes(d.v)?cur:cur+' + '+d.v) : d.v+' '; S[d.ins]=inp.value; save(); refreshLive(); inp.focus(); return; }
-  if(d.tog){ const f = fieldOf(d.tog); let a = S[d.tog]||[];
+  if(d.tog){ const f = fieldOf(d.tog); let a = (S[d.tog]||[]).filter(x=>x!==NS);
     if(a.includes(d.v)) a = a.filter(x=>x!==d.v); else { if(f.max && a.length>=f.max){ toast('Máximo '+f.max+'. Tocá una elegida para sacarla.'); return; } a=[...a,d.v]; }
     S[d.tog]=a; if(f.kind==='traps') S[d.tog+'_none']=false; save(); rerenderField(d.tog); refreshLive(); return; }
   if(d.none){ S[d.none]=[]; S[d.none+'_none']=!S[d.none+'_none']; save(); rerenderField(d.none); return; }
@@ -2928,18 +3097,23 @@ function callGeminiClient(prompt, maxTokens){
 
 
 
-/* ── envío por chat ── */
+/* ── envío por chat: sube el plan a la carpeta de Drive del artista ── */
 function wspURL(t){ return 'https://wa.me/'+WHATSAPP+'?text='+encodeURIComponent(t); }
 function fallbackCard(){
   const n = val('p_nombre') || 'un artista';
-  return row('l', '<div class="mcard"><h3>Plan B: por WhatsApp</h3><p class="note" style="margin-top:0">Guardá el PDF y mandámelo por WhatsApp. No perdés nada.</p><div class="btnrow"><button class="btnw" data-pdf="1">⬇ PDF</button><a class="btnw" target="_blank" rel="noopener" href="'+wspURL('Hola Larry! Soy '+n+'. Te mando mi Manual de Marca 📘')+'">WhatsApp →</a></div></div>', 'wide');
+  return row('l', '<div class="mcard"><h3>¿No encontrás la carpeta?</h3><p class="note" style="margin-top:0">Escribime por WhatsApp y te la paso de nuevo. Cuando la tengas, pegá el link acá abajo.</p><div class="btnrow"><a class="btnw" target="_blank" rel="noopener" href="'+wspURL('Hola Larry! Soy '+n+'. No encuentro el link de mi carpeta de Drive para el Plan de Lanzamiento 🚀')+'">Pedirle la carpeta a Larry →</a></div></div>', 'wide');
 }
 function successCard(){
   const n = val('p_nombre');
-  return row('l', '<div class="mcard"><h3>✓ ¡Listo, ya lo tengo!</h3><p class="note" style="margin-top:0">Subí tus respuestas, tu perfil de artista y tu prompt para IA a tu carpeta de Drive.</p><div class="btnrow"><a class="btnp" style="text-decoration:none" target="_blank" rel="noopener" href="'+wspURL('Hola Larry! Ya te mandé mi Manual de Marca 📘 Soy '+n)+'">Avisarme por WhatsApp →</a></div></div>', 'wide');
+  return row('l', '<div class="mcard"><h3>✓ ¡Listo, ya está en tu carpeta!</h3><p class="note" style="margin-top:0">Te subí <b>tu plan de 21 días</b> como documento de Google, con un título por día.</p><div class="btnrow">'+(S._docUrl?'<a class="btnw" style="text-decoration:none" target="_blank" rel="noopener" href="'+esc(S._docUrl)+'">Abrir mi plan en Drive ↗</a>':'')+'<a class="btnp" style="text-decoration:none" target="_blank" rel="noopener" href="'+wspURL('Hola Larry! Ya subí mi Plan de Lanzamiento 🚀 Soy '+n)+'">Avisarle a Larry →</a></div></div>', 'wide');
+}
+let SEND_FAILED = false;
+function pdfFailCard(){
+  return row('l', '<div class="mcard"><h3>Plan B: descargalo en PDF</h3><p class="note" style="margin-top:0">Probá pegar el link de nuevo. Si sigue sin andar, <b>descargá tu plan en PDF</b> y mandámelo por WhatsApp. No perdés nada.</p><div class="btnrow"><button class="btnw" data-pdf="1">⬇ Descargar en PDF</button></div></div>', 'wide');
 }
 function openSend(i){
-  qb('No tengo carpeta', 'ghost', ()=>{ row('u','<div class="ubub">No tengo carpeta</div>'); row('l','<div class="bub"><p class="vt">Sin drama. Hacelo por acá:</p></div>'); fallbackCard(); toBottom(); });
+  if(SEND_FAILED) qb('⬇ Descargar en PDF y ver mi plan', 'pri', ()=>{ printAll(); S._pdf = 1; save(); finish(i, ()=>row('u','<div class="ubub">Lo descargo en PDF</div>')); });
+  qb('No la encuentro', 'ghost', ()=>{ row('u','<div class="ubub">No la encuentro</div>'); row('l','<div class="bub"><p class="vt">Sin drama, <b>te la paso de nuevo:</b></p></div>'); fallbackCard(); toBottom(); });
   openComposer('https://drive.google.com/drive/folders/...', '', ()=>{
     const link = cin.value.trim();
     if(!/drive\.google\.com/.test(link)){ row('l','<div class="bub err"><p class="vt">Mmm, eso no parece un link de Drive. Tiene que empezar con https://drive.google.com/…</p></div>'); toBottom(); return; }
@@ -2948,27 +3122,21 @@ function openSend(i){
 }
 function doSend(i, driveLink){
   const artista = val('p_nombre') || 'Artista sin nombre';
-  const msg = row('l','<div class="bub"><p class="vt">Armando tu perfil de artista… (1 de 3)</p></div>'); toBottom();
+  const msg = row('l','<div class="bub"><p class="vt">Subiendo tu plan a tu carpeta…</p></div>'); toBottom();
   const set = t => { msg.querySelector('.vt').textContent = t; };
   setTalking(true);
-  const capitulos = gatherManualData();
-  const contextText = buildContextText(capitulos);
-  let perfilTexto=null, promptTexto=null;
-  const chain = !contextText.trim() ? Promise.resolve() :
-    callGeminiClient(buildProfilePrompt(contextText),4096).then(t=>{perfilTexto=t;}).catch(()=>{})
-    .then(()=>{ set('Armando tu prompt para IA… (2 de 3)'); return callGeminiClient(buildContextPromptPrompt(contextText),8192).then(t=>{promptTexto=t;}).catch(()=>{}); });
-  chain.then(()=>{
-    set('Subiendo todo a tu Drive… (3 de 3)');
-    return fetch(MANUAL_APPS_SCRIPT_URL,{method:'POST',body:JSON.stringify({artista,driveLink,capitulos,perfilTexto,promptTexto})})
-      .then(r=>r.json()).then(res=>{
-        setTalking(false);
-        if(res&&res.ok){ S._sent = driveLink; save(); set('¡Subido! 🎉'); successCard(); toBottom(); pos = i+1; savePos(); openInput(-1); }
-        else fail((res&&res.error)||'No se pudo enviar. Revisá el link de la carpeta.');
-      });
-  }).catch(()=>fail('No se pudo conectar. Puede ser tu internet.'));
+  let payload;
+  try { payload = { artista, driveLink, respuestas: planRespuestas(), planTexto: planDocTexto() }; }
+  catch(e){ fail('No pude armar el plan.'); return; }
+  fetch(GUIA_APPS_SCRIPT_URL, { method:'POST', body: JSON.stringify(payload) })
+    .then(r=>r.json()).then(res=>{
+      setTalking(false);
+      if(res && res.ok){ S._sent = driveLink; if(res.url) S._docUrl = res.url; save(); set('¡Subido! 🎉'); successCard(); toBottom(); pos = i+1; savePos(); setTimeout(()=>stepFrom(i+1), 500); }
+      else fail((res && res.error) || 'No se pudo enviar. Revisá el link de la carpeta.');
+    }).catch(()=>fail('No se pudo conectar. Puede ser tu internet.'));
   function fail(m){
     setTalking(false); set('Uy, falló: '+m); msg.querySelector('.bub').classList.add('err');
-    fallbackCard(); toBottom(); openInput(i);
+    pdfFailCard(); toBottom(); SEND_FAILED = true; openInput(i);
   }
 }
 
@@ -2988,7 +3156,7 @@ function rebuild(){
   for(let i=0; i<pos; i++){
     const b = SCRIPT[i];
     if(b.k==='go'){ row('u','<div class="ubub">'+esc(b.label)+'</div>'); continue; }
-    if(b.k==='send'){ if(S._sent){ row('u','<div class="ubub">'+esc(S._sent)+'</div>'); successCard(); } continue; }
+    if(b.k==='send'){ if(S._sent){ row('u','<div class="ubub">'+esc(S._sent)+'</div>'); successCard(); } else if(S._pdf) row('u','<div class="ubub">Lo descargo en PDF</div>'); continue; }
     larryPart(b, false);
     if(b.k==='ask') userAns(b.f, b.sub);
   }
