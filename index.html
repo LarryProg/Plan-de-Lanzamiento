@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <!-- og -->
-<meta name="description" content="Charlá con Larry y armá tu plan de 21 días con fechas reales y tu video viral.">
+<meta name="description" content="Charlá con Larry y armá tu plan de 7 + 21 días con fechas reales y tu video viral.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="@larry.prod">
 <meta property="og:title" content="Plan de Lanzamiento · con Larry">
-<meta property="og:description" content="Charlá con Larry y armá tu plan de 21 días con fechas reales y tu video viral.">
+<meta property="og:description" content="Charlá con Larry y armá tu plan de 7 + 21 días con fechas reales y tu video viral.">
 <meta property="og:url" content="https://larryprog.github.io/Plan-de-Lanzamiento/">
 <meta property="og:image" content="https://larryprog.github.io/estrategia/og/plan.jpg">
 <meta property="og:image:width" content="1200">
@@ -616,6 +616,7 @@ details[open] > .pl-rs{border-bottom:2px dashed #e3d4bb}
 .pl-mc b{font-weight:400;font-size:20px}
 .pl-mc i{font-style:normal;font-size:14px;opacity:.7}
 .pl-mc u{position:absolute;right:1px;top:0;text-decoration:none;font-size:11px}
+.pl-mc.prep{background:#d9d4c7}
 .pl-mc.lanz{background:var(--cl);box-shadow:0 0 0 2px #000 inset,0 0 0 4px var(--cl) inset}
 .pl-mc.past{opacity:.45}
 .pl-mc.on{background:#1b1320;color:#7fff5f;box-shadow:inset 0 -6px 0 var(--c,#7fff5f)}
@@ -1155,12 +1156,12 @@ const STEPS = [
   id:'tema', t:'Tu tema', min:3,
   guide:{"anim":"rise","prop":"rocket","lines":[
     "Primera parada: **tu tema.** Vamos a armar juntos cómo hacer que tu canción __llegue a gente que todavía no te conoce.__",
-    "Te pregunto lo básico: cómo te llamás, cómo se llama la canción y **cuándo sale.** Con la fecha __ya te calculo los 21 días.__"]},
-  why:'Empezamos por lo básico: <b>quién sos, qué canción sale y cuándo</b>. Con la fecha armo tu calendario de 21 días con días reales.',
+    "Te pregunto lo básico: cómo te llamás, cómo se llama la canción y **cuándo sale.** Con la fecha __ya te calculo los 7 + 21 días.__"]},
+  why:'Empezamos por lo básico: <b>quién sos, qué canción sale y cuándo</b>. Con la fecha armo tu calendario de <b>7 días de preparación + 21 de contenido</b> con días reales.',
   fields:[
     {id:'p_nombre', kind:'text', label:'¿Cuál es tu nombre de artista?', hint:'Como aparece __(o va a aparecer)__ en Spotify.', ex:'Santi', ph:'Tu nombre de artista'},
     {id:'p_tema', kind:'text', label:'¿Cómo se llama la canción que vas a lanzar?', hint:'Si todavía no tiene nombre definitivo, __poné el que usás ahora.__', ex:'No me escribas', ph:'Nombre del tema'},
-    {id:'p_fecha', kind:'date', label:'¿Qué día sale?', hint:'Ideal **un viernes**, por lo menos 3 semanas desde hoy. __Si todavía no tenés fecha, tocá «Todavía no lo sé».__', ex:'Un viernes, 3 semanas después de hoy'},
+    {id:'p_fecha', kind:'date', label:'¿Qué día sale?', hint:'Ideal **un viernes**, por lo menos 2 semanas desde hoy. __Si todavía no tenés fecha, tocá «Todavía no lo sé».__', ex:'Un viernes, 2 semanas después de hoy'},
     {id:'p_estado', kind:'choice', label:'¿En qué punto está la canción?', hint:'No hay respuesta mala: __el plan se acomoda.__',
      ex:'Ya está terminado',
      options:[
@@ -1174,10 +1175,10 @@ const STEPS = [
   done:[
     {t:'La canción terminada', s:'Mezclada y masterizada. Si todavía no está, arrancás igual con la maqueta.'},
     {t:'Una distribuidora', s:'La página que sube tu tema a Spotify y al resto (DistroKid, ONErpm, Ditto…).'},
-    {t:'Una fecha', s:'Mejor un viernes, por lo menos 3 semanas desde hoy.'},
+    {t:'Una fecha', s:'Mejor un viernes, por lo menos 2 semanas desde hoy.'},
     {t:'Las 4 cuentas', s:'Instagram, TikTok, YouTube y Facebook. Son gratis.'}
   ],
-  deep:`<h4>Por qué un viernes</h4><p>Los viernes salen los lanzamientos en Spotify y se actualizan las playlists. Por eso tu tema sale el <b>Día 14</b> y ese día cae viernes. El Día 1 es el sábado de 3 semanas antes.</p><h4>¿Qué es una distribuidora?</h4><p>Es la página que sube tu tema a Spotify, Apple Music, YouTube Music y el resto. Algunas conocidas: DistroKid, ONErpm y Ditto. Cada una cobra distinto (algunas por año, otras se quedan un porcentaje): fijate antes de elegir, o preguntame. <b>Va antes que todo</b>: sin el tema cargado no hay fecha ni link para guardarlo antes de que salga.</p><h4>¿Y si no tengo todo?</h4><p>No pasa nada. Con el celular y sin fecha podés arrancar igual con la semana tipo. Si el tema no está terminado, subí la maqueta, una parte de la letra o cómo lo estás haciendo: así, cuando salga, ya hay gente esperándolo.</p>`
+  deep:`<h4>Por qué un viernes</h4><p>Los viernes salen los lanzamientos en Spotify y se actualizan las playlists. Por eso tu tema sale el <b>Día 14</b> y ese día cae viernes. El <b>Día 1</b> (el sábado 13 días antes) subís el tema a la distribuidora; esa semana preparás y grabás, y desde el Día 8 arranca el contenido.</p><h4>¿Qué es una distribuidora?</h4><p>Es la página que sube tu tema a Spotify, Apple Music, YouTube Music y el resto. Algunas conocidas: DistroKid, ONErpm y Ditto. Cada una cobra distinto (algunas por año, otras se quedan un porcentaje): fijate antes de elegir, o preguntame. <b>Va antes que todo</b>: sin el tema cargado no hay fecha ni link para guardarlo antes de que salga.</p><h4>¿Y si no tengo todo?</h4><p>No pasa nada. Con el celular y sin fecha podés arrancar igual con la semana tipo. Si el tema no está terminado, subí la maqueta, una parte de la letra o cómo lo estás haciendo: así, cuando salga, ya hay gente esperándolo.</p>`
 },
 {
   id:'funciona', t:'Cómo funciona', min:5,
@@ -1257,7 +1258,7 @@ const STEPS = [
   deep:`<h4>Los 5 pasos de cualquier reel</h4><ol style="padding-left:18px"><li><b>El pedazo:</b> 15–20 segundos de tu canción que muestren de qué va. Es el mismo en los 3 reels, así los grabás juntos.</li><li><b>El gancho en el primer segundo:</b> un texto o una frase que haga pensar «esto habla de mí» o que dé intriga.</li><li><b>La canción con algo pasando:</b> playback (cantar encima del tema) haciendo algo, en la calle con gente reaccionando, en un lugar que tenga que ver con la letra.</li><li><b>Subtítulos siempre:</b> si entienden de qué va sin sonido, suben el volumen.</li><li><b>Un solo pedido al final:</b> si pedís tres cosas, no hacen ninguna.</li></ol>
 <h4>Tips para el gancho</h4><ul><li><b>Abrí una pregunta, no la cierres.</b> «Esta canción casi no sale» engancha; «esta canción habla de mi ex» no.</li><li><b>Decí por qué quedarse:</b> «quedate que al final te cuento la historia real detrás de esta letra».</li><li><b>Copiá ideas de artistas chicos de tu estilo</b> a los que les esté funcionando, no de famosos: lo de ellos viene de su público o de su sello.</li></ul>
 <h4>Por qué el viral no pide Spotify</h4><p>El que lo ve el lunes no te conoce. Si le pedís que vaya a escucharte, es como pedirle matrimonio en la primera cita: se va. Le pedís algo chiquito (que comente o lo comparta) y eso le dice al algoritmo que le muestre el video a más gente. El pedido de escuchar llega el viernes, cuando ya te vio dos veces.</p>
-<h4>Qué le pedís en cada uno</h4><table class="tbl"><tr><td><b>Lunes · viral</b></td><td>Que comenten o compartan. Vas bien si lo ve gente que no te sigue.</td></tr><tr><td><b>Miércoles · conexión</b></td><td>Que te sigan o te cuenten si les pasó. Vas bien si suman seguidores y te escriben «me pasó lo mismo».</td></tr><tr><td><b>Viernes · conversión</b></td><td>Antes de que salga: que lo guarden con el link de pre-save (el link que avisa y lo agrega a su biblioteca el día que sale). Desde que sale: «ya está, link en la bio».</td></tr></table>
+<h4>Qué le pedís en cada uno</h4><table class="tbl"><tr><td><b>Lunes · viral</b></td><td>Que comenten o compartan. Vas bien si lo ve gente que no te sigue.</td></tr><tr><td><b>Miércoles · conexión</b></td><td>Que te sigan o te cuenten si les pasó. Vas bien si suman seguidores y te escriben «me pasó lo mismo».</td></tr><tr><td><b>Viernes · conversión</b></td><td>Antes de que salga: que te sigan para no perdérsela (la conversión arranca fuerte el Día 14). Desde que sale: «ya está, link en la bio».</td></tr></table>
 <h4>¿Y si no quiero mostrar la cara?</h4><p>Hay virales sin cara: tus manos tocando, la pantalla de tu programa de música, un amigo escuchando tu tema por primera vez, un lugar con la letra escrita encima. Lo importante es que pase algo en la imagen.</p>`
 },
 {
@@ -1331,7 +1332,7 @@ const STEPS = [
   guide:{"anim":"slide","prop":"chart","lines":[
     "Última parada: **cómo saber si vas bien.** No mires solo las vistas: __cada reel tiene su propio número.__",
     "!Los primeros 1 o 2 meses son de entrenamiento: no juzgues por un video. Compará contra vos mismo, no contra otros.",
-    "Y el día 21 no se termina nada: **la semana tipo sigue por lo menos 8 semanas.** __Contame qué querés hacer después.__"]},
+    "Y el día 28 no se termina nada: **la semana tipo sigue por lo menos 8 semanas.** __Contame qué querés hacer después.__"]},
   why:'Cada pieza tiene <b>su número</b>. Si alguno sube respecto de la semana anterior, vas bien, aunque las vistas sigan bajas.',
   visual:'metricas',
   fields:[
@@ -1341,7 +1342,7 @@ const STEPS = [
       {v:'Domingo', s:'Cierro la semana y grabo la próxima'},
       {v:'Lunes', s:'Arranco la semana mirando cómo vengo'},
       {v:'Viernes', s:'Después del reel para que me escuchen'}]},
-    {id:'m_sigue', kind:'choice', label:'Cuando termine el día 21, ¿qué querés hacer?', hint:'No es para siempre: __es para que el plan no se corte el día 22.__',
+    {id:'m_sigue', kind:'choice', label:'Cuando termine el día 28, ¿qué querés hacer?', hint:'No es para siempre: __es para que el plan no se corte el día 29.__',
      ex:'Sacar otro tema en 1-2 meses',
      options:[
       {v:'Sacar otro tema en 1-2 meses', s:'Canción a canción'},
@@ -1356,15 +1357,15 @@ const STEPS = [
     'Miré los números y anoté qué anduvo mejor'
   ],
   deep:`<h4>Los primeros 1–2 meses son de entrenamiento</h4><p>Al principio el algoritmo no sabe quién sos ni a quién mostrarte. Primero le muestra tus videos a tus seguidores, después a gente nueva, y con lo que hacen te va ubicando. Le estás enseñando quién sos. Es como el gimnasio: el cambio se ve después.</p><p style="margin-top:8px">Cuando aprende, aparecen los videos de 10.000 o 30.000 vistas, muy parecidos a los que venías subiendo. <b>Cada video cuenta, aunque no explote.</b> Nos pasa a todos.</p>
-<h4>Después del día 21</h4><ul><li><b>Seguí 8 semanas:</b> 21 días no alcanzan para que el algoritmo te conozca.</li><li><b>Doblá la apuesta:</b> el formato que mejor anduvo, hacelo más seguido.</li><li><b>Siguiente canción:</b> si sacás un tema cada 4–6 semanas, el próximo entra directo a la semana tipo. Así se construye una carrera: canción a canción.</li></ul>
-<h4>Dudas rápidas</h4><ul><li><b>¿Cuántos videos son?</b> 3 por semana: lunes, miércoles y viernes. Si una semana se complica, que no falten el del lunes ni el del viernes.</li><li><b>¿Tengo que estar en las 4 redes?</b> Sí, son gratis y es el mismo video. Si te pesa, arrancá con Instagram y TikTok y sumá las otras en la segunda semana.</li><li><b>¿Pago publicidad?</b> Si tenés menos de 5.000 oyentes mensuales, todavía no: no hay suficiente información de quién es tu público.</li><li><b>¿Y si no tengo fecha ni el tema terminado?</b> Arrancá igual con los reels: la maqueta, una parte de la letra, cómo lo estás haciendo. Los 21 días se cuentan cuando tengas la fecha.</li></ul>`
+<h4>Después del día 28</h4><ul><li><b>Seguí 8 semanas:</b> un lanzamiento no alcanza para que el algoritmo te conozca.</li><li><b>Doblá la apuesta:</b> el formato que mejor anduvo, hacelo más seguido.</li><li><b>Siguiente canción:</b> si sacás un tema cada 4–6 semanas, el próximo entra directo a la semana tipo. Así se construye una carrera: canción a canción.</li></ul>
+<h4>Dudas rápidas</h4><ul><li><b>¿Cuántos videos son?</b> 3 por semana: lunes, miércoles y viernes. Si una semana se complica, que no falten el del lunes ni el del viernes.</li><li><b>¿Tengo que estar en las 4 redes?</b> Sí, son gratis y es el mismo video. Si te pesa, arrancá con Instagram y TikTok y sumá las otras en la segunda semana.</li><li><b>¿Pago publicidad?</b> Si tenés menos de 5.000 oyentes mensuales, todavía no: no hay suficiente información de quién es tu público.</li><li><b>¿Y si no tengo fecha ni el tema terminado?</b> Arrancá igual con los reels: la maqueta, una parte de la letra, cómo lo estás haciendo. Los 7 + 21 días se cuentan cuando tengas la fecha.</li></ul>`
 }
 ];
 
 /* Lo que dice Larry en la portada y en la parada final */
 const GUIDE_COVER = { anim:'rise', prop:'rocket', lines:[
   '¡Hola! Soy **Larry** 👋 Te voy a ayudar a lanzar tu canción.',
-  'Son 6 paradas cortas: **tu tema, cómo funciona, tus reels, tus historias, tu tiempo y medir y seguir.** __Al final te armo tu plan de 21 días con fechas reales.__',
+  'Son 6 paradas cortas: **tu tema, cómo funciona, tus reels, tus historias, tu tiempo y medir y seguir.** __Al final te armo tu plan de 7 + 21 días con fechas reales.__',
   'En cada pregunta vas a ver qué contestó **Santi,** un artista de ejemplo: __hace trap/pop de desamor y solo tiene el celular.__ Es para darte una idea, no para copiarlo.',
   'Si te equivocás, tocá tu respuesta y la cambiás. __Se guarda solo,__ así que podés cortar y seguir otro día (en el mismo celu o compu).',
   '¿Arrancamos?'] };
@@ -1379,21 +1380,21 @@ const AFTER = {
   p_tema: [{k:'say', fn:()=>val('p_tema') ? '**«'+val('p_tema')+'».** Vamos a hacer que llegue.' : 'Sin nombre por ahora, tranqui: __lo podés cambiar cuando quieras.__'}],
   p_fecha: [{k:'say', fn:()=>{
     const s = val('p_fecha');
-    if(!s || !/^\d{4}-\d{2}-\d{2}$/.test(s)) return 'Tranqui: te armo el plan con **un viernes de ejemplo dentro de 3 semanas** __y después lo cambiás.__';
+    if(!s || !/^\d{4}-\d{2}-\d{2}$/.test(s)) return 'Tranqui: te armo el plan con **un viernes de ejemplo dentro de 2 semanas** __y después lo cambiás.__';
     const p = s.split('-').map(Number), f = new Date(p[0], p[1]-1, p[2]), h = new Date(); h.setHours(0,0,0,0);
     const n = Math.round((f - h) / 864e5);
     const dias = ['domingo','lunes','martes','miércoles','jueves','viernes','sábado'], dia = dias[f.getDay()];
     if(n < 0) return 'Esa fecha ya pasó. Si el tema ya salió, igual te sirve: **arrancamos con la semana tipo para empujarlo.** __Si fue un error, tocá tu respuesta y cambiala.__';
     if(n === 0) return '¡Sale hoy! Arrancamos con **un plan comprimido:** __hoy el reel para que lo escuchen y desde mañana la semana tipo.__';
     let t = n === 1 ? '**Falta 1 día.**' : '**Faltan '+n+' días.**';
-    if(n < 14) t += ' Es poco para los 21 días, pero arrancamos igual con un plan comprimido: __lo más importante primero.__';
+    if(n < 13) t += ' Es poco para los 7 + 21 días, pero arrancamos igual con un plan comprimido: __lo más importante primero.__';
     else { const d1 = new Date(f); d1.setDate(d1.getDate() - 13);
-      t += ' Alcanza para el plan completo: __tu Día 1 es el '+dias[d1.getDay()]+' '+d1.getDate()+'/'+(d1.getMonth()+1)+'.__'; }
+      t += ' Alcanza para el plan completo: __tu Día 1 es el '+dias[d1.getDay()]+' '+d1.getDate()+'/'+(d1.getMonth()+1)+': ese día subís el tema a la distribuidora.__'; }
     t += dia === 'viernes' ? ' Y cae viernes, el día ideal 🙌' : ' Cae '+dia+': lo ideal es viernes, __pero el plan acomoda los reels a tu fecha.__';
     return t; }}],
   p_estado: [{k:'say', fn:()=>{ const v = val('p_estado');
     if(v==='Todavía lo estoy grabando') return 'Tranqui, **no hace falta que esté terminado para arrancar.** __Subí la maqueta, una parte de la letra o cómo lo estás haciendo:__ cuando salga, ya va a haber gente esperándolo.';
-    if(v==='Lo estoy mezclando') return 'Bien. Un dato: **tiene que estar cargado en la distribuidora antes del Día 1,** __así el link para guardarlo funciona desde el anuncio.__';
+    if(v==='Lo estoy mezclando') return 'Bien. Un dato: **tiene que estar terminado para el Día 1,** __que es cuando lo subís a la distribuidora.__';
     if(v==='Ya está terminado') return '¡Excelente! **Lo más difícil ya está hecho.** Ahora toca que se escuche.';
     return 'No pasa nada: __el plan arranca igual,__ y lo ajustamos cuando sepas.'; }}],
   d_redes: [{k:'say', fn:()=>{ const sel = [].concat(S.d_redes||[]).filter(x=>x && x!=='Todavía no lo sé'), todas = ['Instagram','TikTok','YouTube Shorts','Facebook'];
@@ -1616,7 +1617,7 @@ const CATALOGO = [
       'Buscá en tus videos del show el momento donde más se ve el público (cantando, saltando, con las luces de los celus).',
       'Cortá 15–20 segundos que coincidan con la parte donde dice «{frase}». Si el audio del show suena mal, poné el tema original encima.',
       'Subtítulos grandes de la letra en el medio de la pantalla, palabra por palabra.',
-      'Al final, el pedido escrito: pre-save o «ya está disponible, link en la bio».'
+      'Al final, el pedido escrito: «sale el [fecha], seguime» o «ya está disponible, link en la bio».'
     ],
     texto:'«{frase}» 🔊',
     caption:'{tema} ya está en todas las plataformas. Link en la bio 🎧',
@@ -1688,10 +1689,10 @@ const CATALOGO = [
       'En {lugar}, celu apoyado fijo en vertical, plano medio con micro (o el celu mismo si no tenés).',
       'Cantá en vivo la parte donde dice «{frase}», como si fuera una prueba. No tiene que estar perfecto.',
       'Arriba el texto «¿la subo o no?» desde el primer segundo. Subtítulos abajo.',
-      'Al final, escrito y dicho: «sale el [fecha], hacé el pre-save, link en la bio». Total: 20–40 s.'
+      'Al final, escrito y dicho: «sale el [fecha], seguime para no perdértela». Total: 20–40 s.'
     ],
     texto:'¿la subo o no? 👀',
-    caption:'{tema} sale pronto. Hacé el pre-save, link en la bio. ¿La subo o no? 👇',
+    caption:'{tema} sale pronto. Seguime para no perdértela. ¿La subo o no? 👇',
     ojo:'Usarlo con un tema que ya salió: la pregunta pierde sentido. Va antes del lanzamiento.' },
 
   { id:'3-4', vimeo:'1185454541', tipo:'conexion',
@@ -1849,7 +1850,7 @@ const CATALOGO = [
       'Abrí el videoclip en CapCut y cortá los 15–20 segundos de la parte donde dice «{frase}».',
       'Si el clip es horizontal, pasalo a vertical (9:16) con zoom al centro de la imagen.',
       'Subtítulos grandes en el medio de la pantalla, palabra por palabra.',
-      'Al final, escrito: «{tema} ya disponible, link en la bio» (o pre-save si todavía no salió).'
+      'Al final, escrito: «{tema} ya disponible, link en la bio» (o «sale el [fecha]» si todavía no salió).'
     ],
     texto:'«{frase}»',
     caption:'{tema} ya disponible. Link en la bio para escucharla completa 🎧',
@@ -1892,10 +1893,24 @@ const PX_SOLO_PRE = ['3-3'];   // recetas de conversión que solo sirven ANTES d
 const PX_LUGAR = {'Mi cuarto':'tu cuarto','La calle':'la calle','El auto':'el auto','El estudio':'el estudio',
   'Con amigos':'una juntada con amigos','Al aire libre':'un lugar al aire libre','Un escenario':'un escenario'};
 const PX_SEM = [
-  {t:'Calentá', s:'Gente nueva te descubre y empieza a conocerte.'},
-  {t:'Lanzamiento', s:'Todo apunta al Día 14: que la escuchen.'},
-  {t:'Empujá', s:'El tema ya salió: que no se apague.'}
+  {t:'Preparar', s:'Subís el tema y dejás todo listo. Todavía no publicás nada del tema.'},
+  {t:'Calentá', s:'Arranca el contenido: que sepan que viene algo. El Día 14 sale.'},
+  {t:'Empujá', s:'El tema ya salió: que lo escuchen.'},
+  {t:'Que lo compartan', s:'Última semana: que no se apague.'}
 ];
+const PX_DIAS_PLAN = 28;
+/* semana 1: preparación (no se publica nada del tema) */
+function pxPrep(n, M){
+  return {
+    1: '<b>Subí el tema a tu distribuidora</b> (DistroKid, plan Músico) con fecha de salida el ' + esc(pxFL(M.launch)) + '.',
+    2: 'Elegí el pedazo de 15–20 segundos del tema y mirá tus 3 virales recomendados.',
+    3: 'Escribí los ganchos y los textos de los reels de las semanas 2 y 3.',
+    4: 'Perfil listo: misma foto, nombre y bio en todas tus redes, y el link apuntando a tu Spotify.',
+    5: '',
+    6: 'Grabá clips para historias: el proceso, tu día a día, la letra.',
+    7: 'Editá y dejá listos los textos de cada publicación. Mañana arranca el contenido.'
+  }[n] || '';
+}
 
 /* recetas genéricas por si el catálogo no trae una que te sirva */
 const PX_GEN = {
@@ -2030,7 +2045,7 @@ function pxFecha(){
   const hoy = pxHoy();
   const avisos = [];
   let launch = pxParse(S.p_fecha), ejemplo = false; const sinFecha = !launch;
-  if(launch && pxDiff(hoy, pxAdd(launch, 7)) < 0){
+  if(launch && pxDiff(hoy, pxAdd(launch, 14)) < 0){
     avisos.push({k:'pasada', t:'La fecha que pusiste (' + pxFL(launch) + ') ya pasó. Te armé el plan con una fecha de ejemplo: cambiala arriba y se actualiza.'});
     launch = null;
   }
@@ -2045,9 +2060,9 @@ function pxFecha(){
   }
   const day1 = pxAdd(launch, -13);
   const faltan = pxDiff(hoy, launch);
-  const hoyN = pxDiff(day1, hoy) + 1;   // número de día que es hoy (puede ser <1 o >21)
-  if(!ejemplo && hoyN > 1 && hoyN <= 14) avisos.push({k:'tarde', t:'Faltan ' + faltan + ' días: el plan ya arrancó. No pasa nada, empezás hoy por el Día ' + hoyN + '. Los días anteriores quedan marcados como «ya pasó».'});
-  if(!ejemplo && hoyN > 14 && hoyN <= 21) avisos.push({k:'post', t:'Tu tema ya salió. Seguí con la semana 3 desde hoy (Día ' + hoyN + '): ahora toca empujarlo.'});
+  const hoyN = pxDiff(day1, hoy) + 1;   // número de día que es hoy (puede ser <1 o >28)
+  if(!ejemplo && hoyN > 1 && hoyN <= 14) avisos.push({k:'tarde', t:'Faltan ' + faltan + ' días: el plan ya arrancó. No pasa nada, empezás hoy por el Día ' + hoyN + (hoyN <= 7 ? ' (si todavía no subiste el tema a la distribuidora, hacelo hoy)' : '') + '. Los días anteriores quedan marcados como «ya pasó».'});
+  if(!ejemplo && hoyN > 14 && hoyN <= 28) avisos.push({k:'post', t:'Tu tema ya salió. Seguí desde hoy (Día ' + hoyN + '): ahora toca empujarlo.'});
   return {hoy, launch, ejemplo, day1, faltan, hoyN, avisos};
 }
 function pxModelo(){
@@ -2068,9 +2083,10 @@ function pxModelo(){
 
   const dias = [], reels = [];
   let ingI = 0, cntV = 0, cntC = 0, cntK = 0;
-  for(let n = 1; n <= 21; n++){
+  for(let n = 1; n <= PX_DIAS_PLAN; n++){
     const d = pxAdd(day1, n - 1), dow = d.getDay(), w = Math.floor((n - 1) / 7);
     const D = {n, d, dow, w, past: !ejemplo && pxDiff(d, hoy) > 0, hoy: !ejemplo && pxDiff(d, hoy) === 0, lanz: n === 14};
+    if(n <= 7){ D.prep = n; if(n === 5) D.graba = 'prep'; dias.push(D); continue; }
     let tipo = dow === 1 ? 'viral' : dow === 3 ? 'conexion' : dow === 5 ? 'conversion' : null;
     if(n === 14) tipo = 'lanz';
     if(tipo){
@@ -2092,7 +2108,7 @@ function pxModelo(){
       else { ing = ['Mostrate','Preguntá','Regalá','Recordá'][ingI % 4]; ingI++; }
       D.hist = {ing, k: n};
     }
-    if(dow === tdia) D.graba = true;
+    if(dow === tdia && n >= 15 && n < 26) D.graba = true;
     dias.push(D);
   }
   // qué graba cada bloque: los próximos 3 reels desde ese día
@@ -2144,7 +2160,7 @@ function pxReceta(e, ctx, print){
 }
 function pxReelNota(R, M){
   if(R.tipo === 'lanz') return '🔗 Hoy: link en la bio apuntando al tema, y repetilo en historias todo el día.';
-  if(R.tipo === 'conversion') return R.post ? 'Cerrá con: «Ya salió · link en mi perfil para escucharla».' : 'Cerrá con: «Sale el ' + esc(pxFL(M.launch)) + ' · link en mi perfil para guardarla (pre-save)».';
+  if(R.tipo === 'conversion') return R.post ? 'Cerrá con: «Ya salió · link en mi perfil para escucharla».' : 'Cerrá con: «Sale el ' + esc(pxFL(M.launch)) + ' · seguime para no perdértela».';
   if(R.tipo === 'viral') return 'Acá NO pidas que escuchen: el objetivo es que gente nueva lo mire hasta el final y lo comparta.';
   return '';
 }
@@ -2163,7 +2179,7 @@ function pxIngEj(ing, k, raw, post, n){
       mo.indexOf('Encuestas y preguntas') >= 0 ? ['Encuesta: «¿Cuál de estas 2 portadas te gusta más?»'] : [],
       ['Encuesta: «¿Te pasó lo que cuento en ' + tema + '?» Sí / Me está pasando.', 'Caja de preguntas: «¿Qué querés saber de la canción?»']),
     'Regalá': ['Un pedacito de ' + tema + ' que nadie escuchó (15 seg).', 'La letra escrita a mano, con la frase que más te gusta.', 'Una toma que salió mal: la gente ama los errores.'],
-    'Recordá': post ? ['«Ya salió ' + tema + '» + link + reposteá a quien la comparta.'] : [(n && n < 14 ? 'Cuenta regresiva: «Faltan ' + (14 - n) + ' días» + sticker de recordatorio.' : 'Cuenta regresiva: «Faltan X días» + sticker de recordatorio.'), 'Link de pre-save en un sticker: «guardala así te llega el día que sale».']
+    'Recordá': post ? ['«Ya salió ' + tema + '» + link + reposteá a quien la comparta.'] : [(n && n < 14 ? 'Cuenta regresiva: «Faltan ' + (14 - n) + ' días» + sticker de recordatorio.' : 'Cuenta regresiva: «Faltan X días» + sticker de recordatorio.'), 'Sticker de cuenta regresiva: «activá el recordatorio y te aviso el día que sale».']
   };
   if(ing === 'Recordá' && k === 14) return '¡SALE HOY! Sticker con link a ' + tema + ', y compartí cada historia donde te etiqueten.';
   if(ing === 'Recordá' && k === 13) return '«Mañana sale ' + tema + '» + sticker de cuenta regresiva para el ' + E(pxFL(M.launch)) + '.';
@@ -2173,7 +2189,7 @@ const PX_ING = {
   'Mostrate': {ic:'👀', d:'Que vean quién sos y qué estás haciendo.'},
   'Preguntá': {ic:'❓', d:'Encuestas y preguntas: que te respondan.'},
   'Regalá':   {ic:'🎁', d:'Algo que nadie más tiene: adelantos, letra, detrás de escena.'},
-  'Recordá':  {ic:'⏰', d:'Que no se olviden: fecha, pre-save, link.'}
+  'Recordá':  {ic:'⏰', d:'Que no se olviden: la fecha y, cuando sale, el link.'}
 };
 
 /* ════════ 1) ELEGI TU VIDEO VIRAL ════════ */
@@ -2200,25 +2216,25 @@ function pxHero(M, print){
   const hecho = pxHechoN();
   const fal = M.faltan > 1 ? 'faltan ' + M.faltan + ' días' : M.faltan === 1 ? '¡sale mañana!' : M.faltan === 0 ? '¡sale hoy!' : 'ya salió';
   return '<div class="pl-hero"><div class="pl-sky" aria-hidden="true"></div>'
-    + '<span class="ps pl-hk">PLAN DE LANZAMIENTO · 21 DIAS</span>'
+    + '<span class="ps pl-hk">PLAN DE LANZAMIENTO · 7 + 21 DIAS</span>'
     + '<div class="pl-hn">' + esc(pxNombre() || 'Tu nombre') + '</div>'
     + '<div class="pl-ht">«' + esc(pxTema() || 'Tu tema') + '»' + (val('p_genero') ? ' <small>· ' + esc(val('p_genero')) + '</small>' : '') + '</div>'
     + '<div class="pl-stats">'
     + '<div><span class="ps">SALE</span><b>' + esc(pxFC(M.launch)) + (M.ejemplo ? ' <i>(ejemplo)</i>' : '') + '</b></div>'
     + '<div><span class="ps">CUENTA</span><b>' + fal + '</b></div>'
     + '<div><span class="ps">VIRAL</span><b>' + pxFill(M.elegido.titulo, M.elegido) + '</b></div>'
-    + (print ? '' : '<div><span class="ps">HECHO</span><b data-pxprogn>' + hecho + ' / 21</b></div>')
+    + (print ? '' : '<div><span class="ps">HECHO</span><b data-pxprogn>' + hecho + ' / ' + PX_DIAS_PLAN + '</b></div>')
     + '</div></div>'
     + (M.avisos.length ? '<div class="pl-avisos">' + M.avisos.map(a => '<p class="pl-aviso pl-av-' + a.k + '">' + esc(a.t) + '</p>').join('') + '</div>' : '');
 }
 function pxSec(n, t, sub, body, cls){
   return '<section class="pl-sec ' + (cls || '') + '"><h4 class="pl-h"><span class="pl-num">' + n + '</span><span>' + t + (sub ? '<small>' + sub + '</small>' : '') + '</span></h4>' + body + '</section>';
 }
-function pxHechoN(){ const o = S.plan_hecho || {}; let c = 0; for(let i = 1; i <= 21; i++) if(o[i]) c++; return c; }
+function pxHechoN(){ const o = S.plan_hecho || {}; let c = 0; for(let i = 1; i <= PX_DIAS_PLAN; i++) if(o[i]) c++; return c; }
 
 function pxSecViral(M, print){
   const e = M.elegido;
-  return pxSec(1, 'Tu video viral', 'El que elegiste. Va el primer lunes.',
+  return pxSec(1, 'Tu video viral', 'El que elegiste. Va el primer lunes de la semana 2.',
     '<div class="pl-elegido"><div class="pl-et">' + pxBadge('viral') + '<b>' + pxFill(e.titulo, e) + '</b></div>'
     + pxReceta(e, {lazy: false, viral: true, nota: pxReelNota({tipo:'viral'}, M), extra: pxGanchos()}, print) + '</div>');
 }
@@ -2234,9 +2250,10 @@ function pxGanchos(){
 }
 function pxSecReels(M, print){
   let h = '<p class="pl-p">Siempre igual: <b class="pl-cv">lunes viral</b> (gente nueva), <b class="pl-cc">miércoles conexión</b> (que te conozcan) y <b class="pl-ck">viernes conversión</b> (que la escuchen). Tocá cada uno para ver cómo grabarlo.</p>';
-  for(let w = 0; w < 3; w++){
+  for(let w = 0; w < 4; w++){
     const rs = M.reels.filter(r => r.w === w), d0 = pxAdd(M.day1, w * 7), d1 = pxAdd(d0, 6);
     h += '<div class="pl-week"><div class="pl-wh"><span class="ps">SEMANA ' + (w + 1) + ' · ' + pxU(PX_SEM[w].t) + '</span><small>' + pxF(d0) + ' – ' + pxF(d1) + ' · ' + PX_SEM[w].s + '</small></div>';
+    if(!rs.length) h += '<p class="pl-small">Esta semana no publicás reels del tema: subís la canción, preparás las ideas y grabás. El primer reel va el lunes de la semana 2.</p>';
     rs.forEach(R => {
       const T = PX_T[R.tipo], ctx = {lazy: true, post: R.post, viral: R.tipo === 'viral', nota: pxReelNota(R, M)};
       const head = '<span class="pl-rdate">' + PX_DC[R.d.getDay()] + '<b>' + R.d.getDate() + '</b></span>' + pxBadge(R.tipo)
@@ -2255,9 +2272,10 @@ function pxDiaHTML(D, M, print){
     const R = D.reel;
     lines += '<div class="pl-ln"><i class="pl-dot" style="--c:' + PX_T[R.tipo].c + '"></i><span><b>Reel ' + (R.tipo === 'lanz' ? 'de lanzamiento' : PX_T[R.tipo].n.toLowerCase()) + ':</b> ' + pxFill(R.e.titulo, R.e, false, {post: R.post}) + '</span></div>';
   }
+  if(D.prep && pxPrep(D.n, M)) lines += '<div class="pl-ln"><i class="pl-ic">' + (D.n === 1 ? '⬆️' : '🛠') + '</i><span><b>' + (D.n === 1 ? 'Hoy:' : 'Preparación:') + '</b> ' + pxPrep(D.n, M) + '</span></div>';
   if(D.hist) lines += '<div class="pl-ln"><i class="pl-ic">' + PX_ING[D.hist.ing].ic + '</i><span><b>3 historias · ' + D.hist.ing + ':</b> ' + pxIngEj(D.hist.ing, D.hist.k, false, D.n > 14, D.n) + '</span></div>';
   if(D.graba && D.grabaReels){
-    lines += '<div class="pl-ln pl-rec-day"><i class="pl-ic">🎬</i><span><b>Bloque de grabación' + (D.graba === 'arranque' ? ' de arranque' : '') + ':</b> grabá de una los próximos reels — '
+    lines += '<div class="pl-ln pl-rec-day"><i class="pl-ic">🎬</i><span><b>Bloque de grabación' + (D.graba === 'arranque' ? ' de arranque' : D.graba === 'prep' ? ' (semana 2)' : '') + ':</b> grabá de una los próximos reels — '
       + D.grabaReels.map(r => PX_DCL[r.d.getDay()].toLowerCase() + ' ' + r.d.getDate() + ' (' + PX_T[r.tipo].n.toLowerCase() + ')').join(', ') + '.</span></div>';
   }
   if(!lines) lines = '<div class="pl-ln pl-rest"><i class="pl-ic">☕</i><span>Día libre: respondé comentarios y mensajes, nada más.</span></div>';
@@ -2266,7 +2284,7 @@ function pxDiaHTML(D, M, print){
     + (print ? '<span class="pl-chk">' + (on ? '☑' : '☐') + '</span>' : '<button class="pl-chk" type="button" data-pxd="' + D.n + '" aria-pressed="' + on + '" aria-label="Marcar día ' + D.n + ' como hecho"></button>')
     + '<div class="pl-dn"><span class="ps">DIA</span><b>' + D.n + '</b></div>'
     + '<div class="pl-db"><div class="pl-dh">' + PX_DIAS[D.dow].charAt(0).toUpperCase() + PX_DIAS[D.dow].slice(1) + ' ' + pxF(D.d)
-    + (D.lanz ? ' <span class="pl-lz">★ LANZAMIENTO</span>' : '') + (D.hoy ? ' <span class="pl-hoy">HOY</span>' : '') + (D.past ? ' <span class="pl-ya">ya pasó</span>' : '') + '</div>'
+    + (D.lanz ? ' <span class="pl-lz">★ LANZAMIENTO</span>' : '') + (D.n === 1 ? ' <span class="pl-lz">⬆ SUBÍS EL TEMA</span>' : '') + (D.hoy ? ' <span class="pl-hoy">HOY</span>' : '') + (D.past ? ' <span class="pl-ya">ya pasó</span>' : '') + '</div>'
     + lines + '</div></div>';
 }
 function pxSecCal(M, print){
@@ -2274,17 +2292,17 @@ function pxSecCal(M, print){
   let map = '<div class="pl-map" aria-hidden="true">';
   M.dias.forEach(D => {
     const t = D.reel ? D.reel.tipo : null, on = !!(S.plan_hecho || {})[D.n];
-    map += '<span class="pl-mc' + (on ? ' on' : '') + (D.past ? ' past' : '') + (D.lanz ? ' lanz' : '') + '" data-pxday="' + D.n + '" style="' + (t ? '--c:' + PX_T[t].c : '') + '"><b>' + D.n + '</b><i>' + PX_DC[D.dow].charAt(0) + '</i>' + (D.graba ? '<u>🎬</u>' : '') + '</span>';
+    map += '<span class="pl-mc' + (on ? ' on' : '') + (D.past ? ' past' : '') + (D.lanz ? ' lanz' : '') + (D.prep ? ' prep' : '') + '" data-pxday="' + D.n + '" style="' + (t ? '--c:' + PX_T[t].c : '') + '"><b>' + D.n + '</b><i>' + PX_DC[D.dow].charAt(0) + '</i>' + (D.graba ? '<u>🎬</u>' : '') + '</span>';
   });
   map += '</div>';
-  const leg = '<div class="pl-leg"><span><i style="--c:#ffaa33"></i>Viral</span><span><i style="--c:#ff7eb6"></i>Conexión</span><span><i style="--c:#7fd4ff"></i>Conversión</span><span><i style="--c:#ffd54a"></i>Lanzamiento</span><span>🎬 Grabación</span></div>';
-  let body = (print ? '' : '<div class="pl-prog"><div class="pl-pbar"><i data-pxprog style="width:' + Math.round(hecho / 21 * 100) + '%"></i></div><span data-pxprogt>' + hecho + ' de 21 días hechos</span></div>')
+  const leg = '<div class="pl-leg"><span><i style="--c:#ffaa33"></i>Viral</span><span><i style="--c:#ff7eb6"></i>Conexión</span><span><i style="--c:#7fd4ff"></i>Conversión</span><span><i style="--c:#ffd54a"></i>Lanzamiento</span><span><i style="--c:#d9d4c7"></i>Preparación</span><span>🎬 Grabación</span></div>';
+  let body = (print ? '' : '<div class="pl-prog"><div class="pl-pbar"><i data-pxprog style="width:' + Math.round(hecho / PX_DIAS_PLAN * 100) + '%"></i></div><span data-pxprogt>' + hecho + ' de ' + PX_DIAS_PLAN + ' días hechos</span></div>')
     + map + leg;
-  for(let w = 0; w < 3; w++){
+  for(let w = 0; w < 4; w++){
     body += '<div class="pl-cw"><div class="pl-wh"><span class="ps">SEMANA ' + (w + 1) + ' · ' + pxU(PX_SEM[w].t) + '</span></div>'
       + M.dias.filter(D => D.w === w).map(D => pxDiaHTML(D, M, print)).join('') + '</div>';
   }
-  return pxSec(3, 'Tu calendario de 21 días', 'Día 14 = el día que sale. ' + (print ? '' : 'Marcá cada día cuando lo cumplas.'), body);
+  return pxSec(3, 'Tu calendario: 7 + 21 días', 'Semana 1 preparás · Día 14 sale el tema. ' + (print ? '' : 'Marcá cada día cuando lo cumplas.'), body);
 }
 function pxSecHist(M){
   const hd = val('h_dias') || '4 días por semana';
@@ -2308,14 +2326,14 @@ function pxSecAjustes(M){
   }[h];
   const est = val('p_estado');
   let estT = '';
-  if(/terminado/i.test(est)) estT = 'Subilo YA a tu distribuidora (DistroKid, ONErpm, etc.): así tenés el link de pre-save para los viernes de conversión. Ideal: 3 semanas antes del ' + esc(pxFL(M.launch)) + '.';
-  else if(/mezclando/i.test(est)) estT = 'Cerrá mezcla y máster en la semana 1 y subilo a la distribuidora cuanto antes (ideal 3 semanas antes). Para los reels usá la versión casi final: en el celu nadie nota la diferencia.';
+  if(/terminado/i.test(est)) estT = 'Subilo a tu distribuidora el Día 1 (' + esc(pxFL(M.day1)) + ') con fecha de salida el ' + esc(pxFL(M.launch)) + '. Con DistroKid plan Músico alcanza.';
+  else if(/mezclando/i.test(est)) estT = 'Tiene que estar terminado para el Día 1 (' + esc(pxFL(M.day1)) + '): ese día lo subís a la distribuidora. Si no llegás, mové la fecha. Para los reels usá la versión casi final: en el celu nadie nota la diferencia.';
   else if(/grabando/i.test(est)) estT = 'Ojo con los tiempos: todavía falta grabar, mezclar y subirlo a la distribuidora. Si no llegás, mové la fecha sin culpa. Mientras, el proceso de grabación es contenido de oro para historias y conexión.';
-  else estT = 'Antes del Día 1 tené el tema subido a tu distribuidora para tener el link de pre-save.';
+  else estT = 'El Día 1 (' + esc(pxFL(M.day1)) + ') subís el tema a tu distribuidora con fecha de salida el Día 14.';
   const redes = pxArr('d_redes'), rl = redes.length ? redes : ['Instagram','TikTok','YouTube Shorts','Facebook'];
   const cu = val('d_cuenta');
   let cuT = /Menos/i.test(cu) ? 'Tenés menos de 500 seguidores: <b>foco total en el viral</b>. Hoy casi nadie te conoce, así que el lunes es el día más importante. Si tenés que elegir, el viral va primero siempre.'
-    : /Más de/i.test(cu) ? 'Con más de 5.000 ya tenés gente que te sigue: <b>conexión y conversión pesan tanto como el viral</b>. Usá las historias para el pre-save y pedí que la compartan.'
+    : /Más de/i.test(cu) ? 'Con más de 5.000 ya tenés gente que te sigue: <b>conexión y conversión pesan tanto como el viral</b>. Usá las historias para la cuenta regresiva y pedí que la compartan.'
     : /Entre/i.test(cu) ? 'Entre 500 y 5.000: <b>mitad para gente nueva, mitad para los que ya te siguen</b>. Viral los lunes sin falta y cuidá las historias.'
     : 'Si tenés pocos seguidores, el viral del lunes es el más importante. Si ya tenés una base, sumale fuerza a las historias.';
   const li = a => '<ul>' + a.map(x => '<li>' + x + '</li>').join('') + '</ul>';
@@ -2330,17 +2348,17 @@ function pxSecAjustes(M){
 }
 function pxSigue(){
   const d = (val('m_dia') || 'Domingo').toLowerCase(), s = val('m_sigue');
-  const after = /otro tema/i.test(s) ? 'Arrancá a preparar el próximo tema: en 1-2 meses repetís estos 21 días. Mientras, seguí con 3 reels por semana usando lo que mejor anduvo.'
+  const after = /otro tema/i.test(s) ? 'Arrancá a preparar el próximo tema: en 1-2 meses repetís estos 7 + 21 días. Mientras, seguí con 3 reels por semana usando lo que mejor anduvo.'
     : /acústica|en vivo/i.test(s) ? 'Grabá la versión acústica o en vivo y usala como contenido nuevo del mismo tema: le da una segunda vida sin esperar otro lanzamiento.'
     : 'Seguí con 3 reels por semana (viral, conexión, conversión) aunque no haya tema nuevo: el algoritmo premia a quien no para.';
-  return '<div class="pl-sigue"><p><b>📅 Tu día de números:</b> los ' + esc(pxPl(d)) + '. Anotá los 3 números de cada reel y compará con la semana anterior.</p><p><b>➡️ Después del día 21:</b> ' + esc(after) + '</p></div>';
+  return '<div class="pl-sigue"><p><b>📅 Tu día de números:</b> los ' + esc(pxPl(d)) + '. Anotá los 3 números de cada reel y compará con la semana anterior.</p><p><b>➡️ Después del día 28:</b> ' + esc(after) + '</p></div>';
 }
 function pxSecMedir(){
   return pxSec(6, 'Medir y seguir', 'Mirá 3 números, una vez por semana.',
     '<div class="pl-med">'
     + '<div><b class="pl-mn" style="--c:#ffaa33">1</b><p><b>Vistas de no seguidores y retención</b> (en el viral). ¿Gente nueva lo ve hasta el final? Eso dice si el gancho funciona.</p></div>'
     + '<div><b class="pl-mn" style="--c:#ff7eb6">2</b><p><b>Guardados y compartidos</b> (en conexión). Valen más que los likes: dicen que le importó.</p></div>'
-    + '<div><b class="pl-mn" style="--c:#7fd4ff">3</b><p><b>Clics al link y pre-saves</b> (en conversión). Es lo que termina en escuchas.</p></div>'
+    + '<div><b class="pl-mn" style="--c:#7fd4ff">3</b><p><b>Clics al link</b> (en conversión). Es lo que termina en escuchas.</p></div>'
     + '</div>'
     + pxSigue() + '<p class="pl-train"><b>🧠 Paciencia:</b> los primeros 1-2 meses estás <b>entrenando al algoritmo</b> para que sepa a quién mostrarte. No juzgues por un video: mirá la tendencia de varias semanas y repetí lo que mejor anduvo.</p>');
 }
@@ -2380,8 +2398,9 @@ function planTexto(){
   L.push('🚀 PLAN DE LANZAMIENTO — ' + (pxNombre() || 'Artista') + ' · «' + (pxTema() || 'mi tema') + '»');
   L.push('Sale: ' + pxFL(M.launch) + (M.ejemplo ? ' (fecha de ejemplo)' : '') + (M.faltan > 0 ? ' — faltan ' + M.faltan + ' días' : ''));
   L.push('Viral elegido: ' + pxFill(e.titulo, e, true) + (e.vimeo ? ' — ' + pxVimeoLink(e.vimeo) : ''));
-  for(let w = 0; w < 3; w++){
+  for(let w = 0; w < 4; w++){
     L.push(''); L.push('SEMANA ' + (w + 1) + ' (' + PX_SEM[w].t + ')');
+    if(w === 0) L.push('• ' + pxFC(M.day1) + ' — DÍA 1: subís el tema a la distribuidora (sale el ' + pxFL(M.launch) + '). Resto de la semana: preparar y grabar.');
     M.reels.filter(r => r.w === w).forEach(R => L.push('• ' + pxFC(R.d) + ' — ' + PX_T[R.tipo].n.toUpperCase() + ': ' + pxFill(R.e.titulo, R.e, true, {post: R.post})));
   }
   L.push('');
@@ -2390,7 +2409,7 @@ function planTexto(){
   L.push('Redes: ' + (pxArr('d_redes').join(', ') || 'todas') + ' · Cuenta: ' + (val('d_cuenta') || '—'));
   L.push('Tiempo: ' + (val('t_horas') || '—') + ' · ' + (val('t_ayuda') || ''));
   L.push('Estado del tema: ' + (val('p_estado') || '—'));
-  L.push('Hecho: ' + pxHechoN() + ' de 21 días');
+  L.push('Hecho: ' + pxHechoN() + ' de ' + PX_DIAS_PLAN + ' días');
   return L.join('\n');
 }
 
@@ -2410,10 +2429,10 @@ function pxSetDay(n){
   document.querySelectorAll('[data-pxday="' + n + '"]').forEach(el => el.classList.toggle('on', !!o[n]));
   document.querySelectorAll('[data-pxd="' + n + '"]').forEach(b => b.setAttribute('aria-pressed', String(!!o[n])));
   const c = pxHechoN();
-  document.querySelectorAll('[data-pxprog]').forEach(b => { b.style.width = Math.round(c / 21 * 100) + '%'; });
-  document.querySelectorAll('[data-pxprogt]').forEach(b => { b.textContent = c + ' de 21 días hechos'; });
-  document.querySelectorAll('[data-pxprogn]').forEach(b => { b.textContent = c + ' / 21'; });
-  if(c === 21) toast('¡21 de 21! Sos una máquina 🏆');
+  document.querySelectorAll('[data-pxprog]').forEach(b => { b.style.width = Math.round(c / PX_DIAS_PLAN * 100) + '%'; });
+  document.querySelectorAll('[data-pxprogt]').forEach(b => { b.textContent = c + ' de ' + PX_DIAS_PLAN + ' días hechos'; });
+  document.querySelectorAll('[data-pxprogn]').forEach(b => { b.textContent = c + ' / ' + PX_DIAS_PLAN; });
+  if(c === PX_DIAS_PLAN) toast('¡28 de 28! Sos una máquina 🏆');
   else if(o[n] && n === 14) toast('¡Salió! 🎉');
 }
 function pxCopy(btn){
@@ -2476,7 +2495,7 @@ function visualMetricas(){
   const R = [
     ['viral','Viral (lunes)','Vistas de gente que no te sigue y cuánto lo miran hasta el final','Si la mayoría se va en los primeros 3 segundos, cambiá el gancho.'],
     ['conexion','Conexión (miércoles)','Guardados, compartidos y comentarios','Valen más que los likes: dicen que le importó.'],
-    ['conversion','Conversión (viernes)','Clics al link y pre-saves','Es lo que termina en escuchas en Spotify.'],
+    ['conversion','Conversión (viernes)','Clics al link','Es lo que termina en escuchas en Spotify.'],
     ['hist','Historias','Respuestas a encuestas y mensajes','Si te responden, te conocen: ahí nacen los fans.']
   ];
   return '<div class="metricas"><span class="ps">QUE NUMERO MIRAR</span>'
@@ -2508,7 +2527,7 @@ function planDocTexto(){
   (e.pasos || []).forEach((p, k) => L.push((k + 1) + '. ' + F(p, e)));
   if(e.texto) L.push('Texto en pantalla: ' + F(e.texto, e));
   L.push('Redes: ' + (arr('d_redes').join(', ') || 'Instagram, TikTok, YouTube Shorts y Facebook') + ' (el mismo video en todas).');
-  L.push('Medís tus números los ' + pxPl((val('m_dia') || 'domingo').toLowerCase()) + '. Después del día 21: ' + (val('m_sigue') || 'seguí con 3 reels por semana') + '.');
+  L.push('Medís tus números los ' + pxPl((val('m_dia') || 'domingo').toLowerCase()) + '. Después del día 28: ' + (val('m_sigue') || 'seguí con 3 reels por semana') + '.');
   L.push('');
   M.dias.forEach(D => {
     const parts = [];
@@ -3117,7 +3136,7 @@ function fallbackCard(){
 }
 function successCard(){
   const n = val('p_nombre');
-  return row('l', '<div class="mcard"><h3>✓ ¡Listo, ya está en tu carpeta!</h3><p class="note" style="margin-top:0">Te subí <b>tu plan de 21 días</b> como documento de Google, con un título por día.</p><div class="btnrow">'+(S._docUrl?'<a class="btnw" style="text-decoration:none" target="_blank" rel="noopener" href="'+esc(S._docUrl)+'">Abrir mi plan en Drive ↗</a>':'')+'<a class="btnp" style="text-decoration:none" target="_blank" rel="noopener" href="'+wspURL('Hola Larry! Ya subí mi Plan de Lanzamiento 🚀 Soy '+n)+'">Avisarle a Larry →</a></div></div>', 'wide');
+  return row('l', '<div class="mcard"><h3>✓ ¡Listo, ya está en tu carpeta!</h3><p class="note" style="margin-top:0">Te subí <b>tu plan de 7 + 21 días</b> como documento de Google, con un título por día.</p><div class="btnrow">'+(S._docUrl?'<a class="btnw" style="text-decoration:none" target="_blank" rel="noopener" href="'+esc(S._docUrl)+'">Abrir mi plan en Drive ↗</a>':'')+'<a class="btnp" style="text-decoration:none" target="_blank" rel="noopener" href="'+wspURL('Hola Larry! Ya subí mi Plan de Lanzamiento 🚀 Soy '+n)+'">Avisarle a Larry →</a></div></div>', 'wide');
 }
 let SEND_FAILED = false;
 function pdfFailCard(){
