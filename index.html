@@ -1893,7 +1893,7 @@ const PX_SOLO_PRE = ['3-3'];   // recetas de conversión que solo sirven ANTES d
 const PX_LUGAR = {'Mi cuarto':'tu cuarto','La calle':'la calle','El auto':'el auto','El estudio':'el estudio',
   'Con amigos':'una juntada con amigos','Al aire libre':'un lugar al aire libre','Un escenario':'un escenario'};
 const PX_SEM = [
-  {t:'Preparar', s:'Subís el tema y dejás todo listo. Todavía no publicás nada del tema.'},
+  {t:'Grabar y preparar', s:'Subís el tema, grabás y preparás todo lo necesario. Todavía no publicás nada del tema.'},
   {t:'Calentá', s:'Arranca el contenido: que sepan que viene algo. El Día 14 sale.'},
   {t:'Empujá', s:'El tema ya salió: que lo escuchen.'},
   {t:'Que lo compartan', s:'Última semana: que no se apague.'}
@@ -2302,7 +2302,7 @@ function pxSecCal(M, print){
     body += '<div class="pl-cw"><div class="pl-wh"><span class="ps">SEMANA ' + (w + 1) + ' · ' + pxU(PX_SEM[w].t) + '</span></div>'
       + M.dias.filter(D => D.w === w).map(D => pxDiaHTML(D, M, print)).join('') + '</div>';
   }
-  return pxSec(3, 'Tu calendario: 7 + 21 días', 'Semana 1 preparás · Día 14 sale el tema. ' + (print ? '' : 'Marcá cada día cuando lo cumplas.'), body);
+  return pxSec(3, 'Tu calendario: 7 + 21 días', 'Semana 1 grabás y preparás todo · Día 14 sale el tema. ' + (print ? '' : 'Marcá cada día cuando lo cumplas.'), body);
 }
 function pxSecHist(M){
   const hd = val('h_dias') || '4 días por semana';
@@ -2400,7 +2400,7 @@ function planTexto(){
   L.push('Viral elegido: ' + pxFill(e.titulo, e, true) + (e.vimeo ? ' — ' + pxVimeoLink(e.vimeo) : ''));
   for(let w = 0; w < 4; w++){
     L.push(''); L.push('SEMANA ' + (w + 1) + ' (' + PX_SEM[w].t + ')');
-    if(w === 0) L.push('• ' + pxFC(M.day1) + ' — DÍA 1: subís el tema a la distribuidora (sale el ' + pxFL(M.launch) + '). Resto de la semana: preparar y grabar.');
+    if(w === 0) L.push('• ' + pxFC(M.day1) + ' — DÍA 1: subís el tema a la distribuidora (sale el ' + pxFL(M.launch) + '). Resto de la semana: grabar y preparar todo lo necesario.');
     M.reels.filter(r => r.w === w).forEach(R => L.push('• ' + pxFC(R.d) + ' — ' + PX_T[R.tipo].n.toUpperCase() + ': ' + pxFill(R.e.titulo, R.e, true, {post: R.post})));
   }
   L.push('');
